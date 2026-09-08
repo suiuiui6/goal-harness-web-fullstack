@@ -68,4 +68,3 @@ Validate the installation with one explicit `/harness-engineering` run that prov
 - pass evidence is cited
 - final `scope_result` and `operation_state` are emitted
 
-
