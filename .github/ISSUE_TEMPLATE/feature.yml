@@ -1,0 +1,10 @@
+name: Feature request
+description: Propose a focused improvement
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Describe the user problem and evidence needed for acceptance.
+    validations:
+      required: true
