@@ -1,0 +1,61 @@
+{
+    "hooks":  {
+                  "PreToolUse":  [
+                                     {
+                                         "matcher":  "apply_patch|shell_command|exec_command|update_goal|Write|Edit|MultiEdit|Bash",
+                                         "hooks":  [
+                                                       {
+                                                           "type":  "command",
+                                                           "command":  "python3 ./scripts/goal_guard.py pre-tool-use",
+                                                           "timeout":  10
+                                                       }
+                                                   ]
+                                     }
+                                 ],
+                  "PostToolUse":  [
+                                      {
+                                          "matcher":  "apply_patch|shell_command|exec_command|update_goal|Write|Edit|MultiEdit|Bash",
+                                          "hooks":  [
+                                                        {
+                                                            "type":  "command",
+                                                            "command":  "python3 ./scripts/goal_guard.py post-tool-use",
+                                                            "timeout":  10
+                                                        }
+                                                    ]
+                                      }
+                                  ],
+                  "UserPromptSubmit":  [
+                                           {
+                                               "hooks":  [
+                                                             {
+                                                                 "type":  "command",
+                                                                 "command":  "python3 ./scripts/goal_guard.py user-prompt-submit --mode hard-hook",
+                                                                 "timeout":  10
+                                                             }
+                                                         ]
+                                           }
+                                       ],
+                  "SessionStart":  [
+                                       {
+                                           "hooks":  [
+                                                         {
+                                                             "type":  "command",
+                                                             "command":  "python3 ./scripts/goal_guard.py session-start --mode hard-hook",
+                                                             "timeout":  10
+                                                         }
+                                                     ]
+                                       }
+                                   ],
+                  "Stop":  [
+                               {
+                                   "hooks":  [
+                                                 {
+                                                     "type":  "command",
+                                                     "command":  "python3 ./scripts/goal_guard.py stop",
+                                                     "timeout":  10
+                                                 }
+                                             ]
+                               }
+                           ]
+              }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "goal-enforcement",
+  "version": "0.1.0+codex.20260712071751",
+  "description": "Evidence-driven state and lifecycle guard for governed Codex project goals.",
+  "author": {
+    "name": "Local developer"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Goal Enforcement",
+    "shortDescription": "Prevent premature mutations and completion in /goal workflows.",
+    "longDescription": "Goal Enforcement validates workspace-local goal state, blocks premature mutations and completion on hook-capable hosts, invalidates stale verification after changes, records failures, and provides an honest audit-only fallback on Windows.",
+    "developerName": "Local developer",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Audit the active /goal state. Resolve the intended project workspace first; if the current directory has no .codex/goal-state.json, ask me for the workspace path before running the guard.",
+      "Explain why a /goal mutation was blocked",
+      "Check whether hard Hook enforcement is available"
+    ]
+  }
+}

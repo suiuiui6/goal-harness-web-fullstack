@@ -1,0 +1,600 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-09-08T04:53:56.5584988Z",
+  "workspace": "C:/Users/14156/Documents/Codex/goal-harness-web-fullstack",
+  "plan_sha256": "4b7d05695abc9aa7eb3f066d62a929a69af729b7af65367c36348f356cb6fe71",
+  "exclusions": [
+    "docs",
+    "__pycache__",
+    ".pytest_cache",
+    ".codex/goal-state.json"
+  ],
+  "source_count": 65,
+  "files": [
+    {
+      "package": "goal",
+      "relative_path": "evals/agent-context-routing.json",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/evals/agent-context-routing.json",
+      "candidate_path": "source/goal/evals/agent-context-routing.json",
+      "baseline_path": "artifacts/baseline/goal/evals/agent-context-routing.json",
+      "sha256": "f0276c14aad86e4cf54961e02de8c5de768b3f93ba3acb4d5ebf80777cb138c5",
+      "bytes": 615
+    },
+    {
+      "package": "goal",
+      "relative_path": "evals/agent-tool-contract-routing.json",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/evals/agent-tool-contract-routing.json",
+      "candidate_path": "source/goal/evals/agent-tool-contract-routing.json",
+      "baseline_path": "artifacts/baseline/goal/evals/agent-tool-contract-routing.json",
+      "sha256": "64c5bbf8c81e76425046cc1f5167d2e89cf2dc471a465a1a10704202ecae4382",
+      "bytes": 982
+    },
+    {
+      "package": "goal",
+      "relative_path": "evals/behavior-evals.json",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/evals/behavior-evals.json",
+      "candidate_path": "source/goal/evals/behavior-evals.json",
+      "baseline_path": "artifacts/baseline/goal/evals/behavior-evals.json",
+      "sha256": "689ec4831175210b74ef33d0b770ef78415cecbf169784cc75fc5dcf807e3e86",
+      "bytes": 13938
+    },
+    {
+      "package": "goal",
+      "relative_path": "evals/trigger-queries.json",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/evals/trigger-queries.json",
+      "candidate_path": "source/goal/evals/trigger-queries.json",
+      "baseline_path": "artifacts/baseline/goal/evals/trigger-queries.json",
+      "sha256": "3b3b64632ab05ad39708e273a7af55565f4d5945276ae1a2fa4ae242540edc87",
+      "bytes": 3947
+    },
+    {
+      "package": "goal",
+      "relative_path": "references/capability-discovery.md",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/references/capability-discovery.md",
+      "candidate_path": "source/goal/references/capability-discovery.md",
+      "baseline_path": "artifacts/baseline/goal/references/capability-discovery.md",
+      "sha256": "0aba1935db7413f4ffb8d35ef3c3680ae2f1908e035ef24b58366cdf036d2e9f",
+      "bytes": 4061
+    },
+    {
+      "package": "goal",
+      "relative_path": "references/external-workflow-boundary.md",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/references/external-workflow-boundary.md",
+      "candidate_path": "source/goal/references/external-workflow-boundary.md",
+      "baseline_path": "artifacts/baseline/goal/references/external-workflow-boundary.md",
+      "sha256": "d0be71293c7c842d50182a0c569e2072d967997e168b517e8821798f53fc9e31",
+      "bytes": 5315
+    },
+    {
+      "package": "goal",
+      "relative_path": "references/gsd-adapter.md",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/references/gsd-adapter.md",
+      "candidate_path": "source/goal/references/gsd-adapter.md",
+      "baseline_path": "artifacts/baseline/goal/references/gsd-adapter.md",
+      "sha256": "20789aef4272ac4291880a421bec25d7295f58f302238137f59267ab867da2c9",
+      "bytes": 1425
+    },
+    {
+      "package": "goal",
+      "relative_path": "references/host-modes.md",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/references/host-modes.md",
+      "candidate_path": "source/goal/references/host-modes.md",
+      "baseline_path": "artifacts/baseline/goal/references/host-modes.md",
+      "sha256": "7985e1c634a08b3366038246e9101b310a668bb8a7a49b0c810e95ac7591a32e",
+      "bytes": 5798
+    },
+    {
+      "package": "goal",
+      "relative_path": "references/layer-execution.md",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/references/layer-execution.md",
+      "candidate_path": "source/goal/references/layer-execution.md",
+      "baseline_path": "artifacts/baseline/goal/references/layer-execution.md",
+      "sha256": "4aedf3d97ff325bb2cb98ecfa374e3eed6530e7d47fc2acf61d986762305e3c3",
+      "bytes": 1737
+    },
+    {
+      "package": "goal",
+      "relative_path": "references/output-contract.md",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/references/output-contract.md",
+      "candidate_path": "source/goal/references/output-contract.md",
+      "baseline_path": "artifacts/baseline/goal/references/output-contract.md",
+      "sha256": "30dc7abd5398a3bf3bd9527880dbea19c2ba43fb0d72cb6441fd6bcf25e20be6",
+      "bytes": 8167
+    },
+    {
+      "package": "goal",
+      "relative_path": "references/protocol-guide.md",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/references/protocol-guide.md",
+      "candidate_path": "source/goal/references/protocol-guide.md",
+      "baseline_path": "artifacts/baseline/goal/references/protocol-guide.md",
+      "sha256": "423e9649a3412aaf89e609bf3670914d56f0533a9a97d1bf213e7c170849fe2c",
+      "bytes": 2035
+    },
+    {
+      "package": "goal",
+      "relative_path": "references/protocol.json",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/references/protocol.json",
+      "candidate_path": "source/goal/references/protocol.json",
+      "baseline_path": "artifacts/baseline/goal/references/protocol.json",
+      "sha256": "4f1b8774c10ce02856dae84e8b55ec15a10cb91baccfe4713522e5edd20e502f",
+      "bytes": 2148
+    },
+    {
+      "package": "goal",
+      "relative_path": "scripts/fixtures/malformed-protocol/references/protocol.json",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/scripts/fixtures/malformed-protocol/references/protocol.json",
+      "candidate_path": "source/goal/scripts/fixtures/malformed-protocol/references/protocol.json",
+      "baseline_path": "artifacts/baseline/goal/scripts/fixtures/malformed-protocol/references/protocol.json",
+      "sha256": "5715ea11351f96c1faee52d83ceb8edf41612427a452f7acc780b6bc05072500",
+      "bytes": 10
+    },
+    {
+      "package": "goal",
+      "relative_path": "scripts/protocol.py",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/scripts/protocol.py",
+      "candidate_path": "source/goal/scripts/protocol.py",
+      "baseline_path": "artifacts/baseline/goal/scripts/protocol.py",
+      "sha256": "90614350027afbd738295b96fc44bcf5cdba29586b841eec55e8cea5ec89e331",
+      "bytes": 9037
+    },
+    {
+      "package": "goal",
+      "relative_path": "scripts/test_agent_context_review_routing.py",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/scripts/test_agent_context_review_routing.py",
+      "candidate_path": "source/goal/scripts/test_agent_context_review_routing.py",
+      "baseline_path": "artifacts/baseline/goal/scripts/test_agent_context_review_routing.py",
+      "sha256": "197eb9d44f6217fc2bf66a328a7f644be92c023dfc58b8e5bc980cc4f89c6d78",
+      "bytes": 1172
+    },
+    {
+      "package": "goal",
+      "relative_path": "scripts/test_agent_tool_contract_review_routing.py",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/scripts/test_agent_tool_contract_review_routing.py",
+      "candidate_path": "source/goal/scripts/test_agent_tool_contract_review_routing.py",
+      "baseline_path": "artifacts/baseline/goal/scripts/test_agent_tool_contract_review_routing.py",
+      "sha256": "364a89f1472708413349866f395e582e165f8be201c7b8a4ef17a39ceab75aa3",
+      "bytes": 3089
+    },
+    {
+      "package": "goal",
+      "relative_path": "scripts/test_goal_guard_integration.py",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/scripts/test_goal_guard_integration.py",
+      "candidate_path": "source/goal/scripts/test_goal_guard_integration.py",
+      "baseline_path": "artifacts/baseline/goal/scripts/test_goal_guard_integration.py",
+      "sha256": "bc730f45efbd7abf72c36023071f1b1879621ac5c5a7058f2ba9f3be405a7129",
+      "bytes": 8164
+    },
+    {
+      "package": "goal",
+      "relative_path": "scripts/test_goal_skill_discovery.py",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/scripts/test_goal_skill_discovery.py",
+      "candidate_path": "source/goal/scripts/test_goal_skill_discovery.py",
+      "baseline_path": "artifacts/baseline/goal/scripts/test_goal_skill_discovery.py",
+      "sha256": "5ea909291ae101818a06af1cf9aec9aeb7c084fe738c3dec2f42a16c17860a0c",
+      "bytes": 978
+    },
+    {
+      "package": "goal",
+      "relative_path": "scripts/test_protocol.py",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/scripts/test_protocol.py",
+      "candidate_path": "source/goal/scripts/test_protocol.py",
+      "baseline_path": "artifacts/baseline/goal/scripts/test_protocol.py",
+      "sha256": "088884d83ae7e63cab674710cccb67e12d796718cb3bd8ac5ad2590bb727620a",
+      "bytes": 10096
+    },
+    {
+      "package": "goal",
+      "relative_path": "scripts/test_validate_goal_skill.py",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/scripts/test_validate_goal_skill.py",
+      "candidate_path": "source/goal/scripts/test_validate_goal_skill.py",
+      "baseline_path": "artifacts/baseline/goal/scripts/test_validate_goal_skill.py",
+      "sha256": "5148d20c71a30c87ca0fb2dde71afde36a9cbe3f75374199a653fe7dc58e16de",
+      "bytes": 89538
+    },
+    {
+      "package": "goal",
+      "relative_path": "scripts/validate_goal_skill.py",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/scripts/validate_goal_skill.py",
+      "candidate_path": "source/goal/scripts/validate_goal_skill.py",
+      "baseline_path": "artifacts/baseline/goal/scripts/validate_goal_skill.py",
+      "sha256": "2cb72434c9c9fbd776f926e0948e3d900f2d3d1e215cae93e056b8325e69a214",
+      "bytes": 34911
+    },
+    {
+      "package": "goal",
+      "relative_path": "SKILL.md",
+      "installed_path": "C:/Users/14156/.codex/skills/goal/SKILL.md",
+      "candidate_path": "source/goal/SKILL.md",
+      "baseline_path": "artifacts/baseline/goal/SKILL.md",
+      "sha256": "a19496d573876fdceb8c1d842a196246b800ec5672c3c7501217b4fb228e39ed",
+      "bytes": 10562
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "adapters/claude-code/assembly.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/adapters/claude-code/assembly.md",
+      "candidate_path": "source/harness-engineering/adapters/claude-code/assembly.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/adapters/claude-code/assembly.md",
+      "sha256": "54e6fd2a555b416fd3b442393ff4c044ea7b8c4b1ab6b095f668d49c6ed8eb1e",
+      "bytes": 2880
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "adapters/claude-code/host-map.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/adapters/claude-code/host-map.md",
+      "candidate_path": "source/harness-engineering/adapters/claude-code/host-map.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/adapters/claude-code/host-map.md",
+      "sha256": "f03dd67e85e2e2081513ea5b62e1b26016bb2b23b2c9377668a6ed1adb2e7365",
+      "bytes": 1911
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "adapters/codex/assembly.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/adapters/codex/assembly.md",
+      "candidate_path": "source/harness-engineering/adapters/codex/assembly.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/adapters/codex/assembly.md",
+      "sha256": "e978afe3d03485641f38b62d34384d8da632fa06028b03e5892c9dabe8ed7ee7",
+      "bytes": 2921
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "adapters/codex/host-map.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/adapters/codex/host-map.md",
+      "candidate_path": "source/harness-engineering/adapters/codex/host-map.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/adapters/codex/host-map.md",
+      "sha256": "ef6ce286d2c49389cc3f0da0a2047b6149a2771e2ab3ef72b94756ecf7dcf3ca",
+      "bytes": 1998
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "CHECKS.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/CHECKS.md",
+      "candidate_path": "source/harness-engineering/CHECKS.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/CHECKS.md",
+      "sha256": "a8e444d7c3b2718f0b50a58f7493ad8add66257997adcfb86b757ac616e557e6",
+      "bytes": 6704
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "core/capability-model.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/core/capability-model.md",
+      "candidate_path": "source/harness-engineering/core/capability-model.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/core/capability-model.md",
+      "sha256": "aa596b649ff3b9883e14f15b4e96d6cd1bf42f13ddce9b1f3770ae5cd73f6b4d",
+      "bytes": 2323
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "core/checklists.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/core/checklists.md",
+      "candidate_path": "source/harness-engineering/core/checklists.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/core/checklists.md",
+      "sha256": "e7ce5809bc48d329bb17d790fdb04ece4b84370d00edac3344a05c4234657971",
+      "bytes": 4799
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "core/exit-and-reentry.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/core/exit-and-reentry.md",
+      "candidate_path": "source/harness-engineering/core/exit-and-reentry.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/core/exit-and-reentry.md",
+      "sha256": "f199ff725f4ba64f10ba6c46d94e46260977904fc932caae98d44c0a06ec7b41",
+      "bytes": 2342
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "core/flow.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/core/flow.md",
+      "candidate_path": "source/harness-engineering/core/flow.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/core/flow.md",
+      "sha256": "fcd013f63801fdb88a64fecbeba5deeb54f6d5149bc7c53927afc435da603348",
+      "bytes": 5232
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "core/layer-details.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/core/layer-details.md",
+      "candidate_path": "source/harness-engineering/core/layer-details.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/core/layer-details.md",
+      "sha256": "49257c4863a4a4044ec19d390515447ee350f019fb5485e237215741326d7df7",
+      "bytes": 4915
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "evals/claude-behavior-evals.json",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/evals/claude-behavior-evals.json",
+      "candidate_path": "source/harness-engineering/evals/claude-behavior-evals.json",
+      "baseline_path": "artifacts/baseline/harness-engineering/evals/claude-behavior-evals.json",
+      "sha256": "ee7872c5c3a983a68ec40c7f30d544311f45652f26ab240d52bfc3e3b75940f4",
+      "bytes": 7195
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "evals/codex-behavior-evals.json",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/evals/codex-behavior-evals.json",
+      "candidate_path": "source/harness-engineering/evals/codex-behavior-evals.json",
+      "baseline_path": "artifacts/baseline/harness-engineering/evals/codex-behavior-evals.json",
+      "sha256": "ac9a017ea5ea6765f7f92465212e93886d3717683f3c2842cfea0e178144dd5e",
+      "bytes": 7089
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "evals/contract-invariants.json",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/evals/contract-invariants.json",
+      "candidate_path": "source/harness-engineering/evals/contract-invariants.json",
+      "baseline_path": "artifacts/baseline/harness-engineering/evals/contract-invariants.json",
+      "sha256": "3d3d57ad04e86f8f885faffec3a5c99ed705a96030ab06742ef18c474c5a99a6",
+      "bytes": 7696
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "evals/recorded-responses.example.json",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/evals/recorded-responses.example.json",
+      "candidate_path": "source/harness-engineering/evals/recorded-responses.example.json",
+      "baseline_path": "artifacts/baseline/harness-engineering/evals/recorded-responses.example.json",
+      "sha256": "437f20eb4cba3d3a9ab123554086814214a86edf85c2a4b32a36381fcfd3d6e8",
+      "bytes": 226
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "evals/trigger-queries.json",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/evals/trigger-queries.json",
+      "candidate_path": "source/harness-engineering/evals/trigger-queries.json",
+      "baseline_path": "artifacts/baseline/harness-engineering/evals/trigger-queries.json",
+      "sha256": "4747ffc9b44f9cfb45ef22bee681ed061630a68968a1c90163f6de90a236d297",
+      "bytes": 1169
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "PHASES.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/PHASES.md",
+      "candidate_path": "source/harness-engineering/PHASES.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/PHASES.md",
+      "sha256": "4b19d67cb3f24068e312e9d36771afdfb5fbac3b7082801226f09935fd9dbf2f",
+      "bytes": 7639
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "references/agent-templates/chatbot-coder.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/references/agent-templates/chatbot-coder.md",
+      "candidate_path": "source/harness-engineering/references/agent-templates/chatbot-coder.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/references/agent-templates/chatbot-coder.md",
+      "sha256": "873e665833bdb5abc45969a1d922821551f196c66dcc42739fef8a3667c1172a",
+      "bytes": 1628
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "references/agent-templates/chatbot-debugger.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/references/agent-templates/chatbot-debugger.md",
+      "candidate_path": "source/harness-engineering/references/agent-templates/chatbot-debugger.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/references/agent-templates/chatbot-debugger.md",
+      "sha256": "68d73d5b1605f3f749f0a1d3b321331aee5894e251ede7e7c7bd168a19c19124",
+      "bytes": 2929
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "references/agent-templates/chatbot-planner.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/references/agent-templates/chatbot-planner.md",
+      "candidate_path": "source/harness-engineering/references/agent-templates/chatbot-planner.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/references/agent-templates/chatbot-planner.md",
+      "sha256": "b8705aa0f059cdbb1c84e94d908b060dde367ca02bd08f01d0e85f23a2a2b6c4",
+      "bytes": 3038
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "references/agent-templates/chatbot-reviewer.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/references/agent-templates/chatbot-reviewer.md",
+      "candidate_path": "source/harness-engineering/references/agent-templates/chatbot-reviewer.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/references/agent-templates/chatbot-reviewer.md",
+      "sha256": "2c1ac0b5aa27ff6ab33eefa064612ccb90b6ec1e5c1886a29acf2bbd9fc70174",
+      "bytes": 1703
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "references/decision-quality.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/references/decision-quality.md",
+      "candidate_path": "source/harness-engineering/references/decision-quality.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/references/decision-quality.md",
+      "sha256": "718f9b66e6b3893d8004eb51f663d05f1a22a591967f34d1f1c6ddac83d96efe",
+      "bytes": 6838
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "references/delivery-arc.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/references/delivery-arc.md",
+      "candidate_path": "source/harness-engineering/references/delivery-arc.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/references/delivery-arc.md",
+      "sha256": "4ec8db62934aa3455231e51c1e3ea792af33251c870896e185f7f33aa7342462",
+      "bytes": 1049
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "references/learn-harness-engineering-mapping.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/references/learn-harness-engineering-mapping.md",
+      "candidate_path": "source/harness-engineering/references/learn-harness-engineering-mapping.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/references/learn-harness-engineering-mapping.md",
+      "sha256": "83c83574fa9ef59a28f03f0fb126ee1f9eca6d99d8df2f10b1b6c03ec21d383d",
+      "bytes": 2354
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "references/output-contract.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/references/output-contract.md",
+      "candidate_path": "source/harness-engineering/references/output-contract.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/references/output-contract.md",
+      "sha256": "594ce4ede53fa180f2fe0b25e4defaecf180353426837e314bdc8a73b8dc9941",
+      "bytes": 3475
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "references/runtime-stages.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/references/runtime-stages.md",
+      "candidate_path": "source/harness-engineering/references/runtime-stages.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/references/runtime-stages.md",
+      "sha256": "ef848f4cfd6f0c9261737c59169b3996d51c3ef4ced42f23e47452faa5d119e7",
+      "bytes": 2449
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "REQUIRED-EXECUTION-RECORD.example.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/REQUIRED-EXECUTION-RECORD.example.md",
+      "candidate_path": "source/harness-engineering/REQUIRED-EXECUTION-RECORD.example.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/REQUIRED-EXECUTION-RECORD.example.md",
+      "sha256": "83f0cdd64e9dec797fb3c60515d0d45db1de7c02dff9673bf204714112a27fcb",
+      "bytes": 4109
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "REQUIRED-EXECUTION-RECORD.template.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/REQUIRED-EXECUTION-RECORD.template.md",
+      "candidate_path": "source/harness-engineering/REQUIRED-EXECUTION-RECORD.template.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/REQUIRED-EXECUTION-RECORD.template.md",
+      "sha256": "b4b1fcdc2997b2389afe5a94b2712e55749cf2ba85a1b02ef6b9058210969b38",
+      "bytes": 3858
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "scripts/behavior_evals.py",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/scripts/behavior_evals.py",
+      "candidate_path": "source/harness-engineering/scripts/behavior_evals.py",
+      "baseline_path": "artifacts/baseline/harness-engineering/scripts/behavior_evals.py",
+      "sha256": "859e579a38ddb1b23f324c4ae178270e82fe1ce5b1657e89c6981438f582eb29",
+      "bytes": 10661
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "scripts/contract_consistency.py",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/scripts/contract_consistency.py",
+      "candidate_path": "source/harness-engineering/scripts/contract_consistency.py",
+      "baseline_path": "artifacts/baseline/harness-engineering/scripts/contract_consistency.py",
+      "sha256": "979ee75c07e2b74a1ba5c12a1e41d447e78c2cad3041fd9caa3a20d938da498a",
+      "bytes": 5793
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "scripts/render_skill_review.py",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/scripts/render_skill_review.py",
+      "candidate_path": "source/harness-engineering/scripts/render_skill_review.py",
+      "baseline_path": "artifacts/baseline/harness-engineering/scripts/render_skill_review.py",
+      "sha256": "b673dc414bc2649bf777f30b112fc8c44bedf83429916ea31c2aa8cd3ebc1081",
+      "bytes": 4826
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "scripts/test_behavior_evals.py",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/scripts/test_behavior_evals.py",
+      "candidate_path": "source/harness-engineering/scripts/test_behavior_evals.py",
+      "baseline_path": "artifacts/baseline/harness-engineering/scripts/test_behavior_evals.py",
+      "sha256": "bd59848d5e287f12d494aa398c11cd9092f57b2d3edab5028ac5a1cb0a26a58a",
+      "bytes": 20276
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "scripts/test_contract_consistency.py",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/scripts/test_contract_consistency.py",
+      "candidate_path": "source/harness-engineering/scripts/test_contract_consistency.py",
+      "baseline_path": "artifacts/baseline/harness-engineering/scripts/test_contract_consistency.py",
+      "sha256": "4e246705034b7eb0a51cdd1755c6a39d7a5853f8eb4ce80db644c01d1cfb28b2",
+      "bytes": 17314
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "scripts/test_render_skill_review.py",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/scripts/test_render_skill_review.py",
+      "candidate_path": "source/harness-engineering/scripts/test_render_skill_review.py",
+      "baseline_path": "artifacts/baseline/harness-engineering/scripts/test_render_skill_review.py",
+      "sha256": "a2b4dc435b10953eba5e2a5a34ea13407b72d7d942ecfc9a9e27dfa2e08fddf2",
+      "bytes": 2816
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "scripts/test_validate_harness_skill.py",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/scripts/test_validate_harness_skill.py",
+      "candidate_path": "source/harness-engineering/scripts/test_validate_harness_skill.py",
+      "baseline_path": "artifacts/baseline/harness-engineering/scripts/test_validate_harness_skill.py",
+      "sha256": "c5be262958cc3bf55872c9054c136b449c96ff5679ec5a6fa0184bde06c1ead1",
+      "bytes": 12052
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "scripts/validate_harness_skill.py",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/scripts/validate_harness_skill.py",
+      "candidate_path": "source/harness-engineering/scripts/validate_harness_skill.py",
+      "baseline_path": "artifacts/baseline/harness-engineering/scripts/validate_harness_skill.py",
+      "sha256": "1889dd625d821985a39766137bbb79de2563411430799f4d5b550f023d100a43",
+      "bytes": 10375
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "SKILL.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/SKILL.md",
+      "candidate_path": "source/harness-engineering/SKILL.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/SKILL.md",
+      "sha256": "f4a530c0f92cabbc59d3f85cc2393eab1c5b0843e81b0ade363808a882d984ae",
+      "bytes": 3540
+    },
+    {
+      "package": "harness-engineering",
+      "relative_path": "SPEC.md",
+      "installed_path": "C:/Users/14156/.codex/skills/harness-engineering/SPEC.md",
+      "candidate_path": "source/harness-engineering/SPEC.md",
+      "baseline_path": "artifacts/baseline/harness-engineering/SPEC.md",
+      "sha256": "0e205955f185c600d7ccee5b78b252492948c7cd2567e42a4a425afb01395958",
+      "bytes": 13782
+    },
+    {
+      "package": "goal-enforcement",
+      "relative_path": ".codex-plugin/plugin.json",
+      "installed_path": "C:/Users/14156/plugins/goal-enforcement/.codex-plugin/plugin.json",
+      "candidate_path": "source/goal-enforcement/.codex-plugin/plugin.json",
+      "baseline_path": "artifacts/baseline/goal-enforcement/.codex-plugin/plugin.json",
+      "sha256": "6a8670fc9afec06e87973b5b9043d431607e91f60b5ba912e73c8e65fd24ed87",
+      "bytes": 1149
+    },
+    {
+      "package": "goal-enforcement",
+      "relative_path": "hooks.json",
+      "installed_path": "C:/Users/14156/plugins/goal-enforcement/hooks.json",
+      "candidate_path": "source/goal-enforcement/hooks.json",
+      "baseline_path": "artifacts/baseline/goal-enforcement/hooks.json",
+      "sha256": "884149d098b14968bad789f9f65abc9cd70eacd9d7ae6c1f81f365a8839e46d9",
+      "bytes": 3634
+    },
+    {
+      "package": "goal-enforcement",
+      "relative_path": "scripts/goal_guard.py",
+      "installed_path": "C:/Users/14156/plugins/goal-enforcement/scripts/goal_guard.py",
+      "candidate_path": "source/goal-enforcement/scripts/goal_guard.py",
+      "baseline_path": "artifacts/baseline/goal-enforcement/scripts/goal_guard.py",
+      "sha256": "26417264a321451658e224e29c318030bc49d34644a175a96938f6e50553c353",
+      "bytes": 85399
+    },
+    {
+      "package": "goal-enforcement",
+      "relative_path": "skills/goal-enforcement/SKILL.md",
+      "installed_path": "C:/Users/14156/plugins/goal-enforcement/skills/goal-enforcement/SKILL.md",
+      "candidate_path": "source/goal-enforcement/skills/goal-enforcement/SKILL.md",
+      "baseline_path": "artifacts/baseline/goal-enforcement/skills/goal-enforcement/SKILL.md",
+      "sha256": "dbad08af1e13caa224a945c4dbb73ea1113f45c883ede78432e94a969446ccb6",
+      "bytes": 4225
+    },
+    {
+      "package": "goal-enforcement",
+      "relative_path": "tests/test_goal_guard.py",
+      "installed_path": "C:/Users/14156/plugins/goal-enforcement/tests/test_goal_guard.py",
+      "candidate_path": "source/goal-enforcement/tests/test_goal_guard.py",
+      "baseline_path": "artifacts/baseline/goal-enforcement/tests/test_goal_guard.py",
+      "sha256": "cd08b7c7ab88822077bd2004aa56a2b7c564501b13ae94c4143c4d9f08d61cd0",
+      "bytes": 77987
+    },
+    {
+      "package": "goal-enforcement",
+      "relative_path": "tests/test_plugin_contract.py",
+      "installed_path": "C:/Users/14156/plugins/goal-enforcement/tests/test_plugin_contract.py",
+      "candidate_path": "source/goal-enforcement/tests/test_plugin_contract.py",
+      "baseline_path": "artifacts/baseline/goal-enforcement/tests/test_plugin_contract.py",
+      "sha256": "0a0a1a6f9cddeea39c04e3bf775fd9d44d603210e23a8110c70acc618e16ae20",
+      "bytes": 1179
+    }
+  ]
+}

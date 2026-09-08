@@ -1,0 +1,34 @@
+[
+  {
+    "query": "/harness-engineering 我们要替换核心检索组件并重做 bridge 契约，先判断 mode 和起始层。",
+    "should_trigger": true
+  },
+  {
+    "query": "这个不是一个小修。我们要调整系统拓扑，把事件总线接到新的处理链路里，并且每层都要有 gate 证据。",
+    "should_trigger": true
+  },
+  {
+    "query": "现有实现能跑，但提交流程、测试门、发布检查都漂移了。按 harness-engineering 带着做治理修复。",
+    "should_trigger": true
+  },
+  {
+    "query": "新增一条客户导入、审核、发布主链路，前后端和验收规则都要动，而且要最小回滚。",
+    "should_trigger": true
+  },
+  {
+    "query": "帮我解释一下这个函数为什么返回 null。",
+    "should_trigger": false
+  },
+  {
+    "query": "把登录页按钮颜色改成蓝色。",
+    "should_trigger": false
+  },
+  {
+    "query": "review 一下这个 PR 还有什么风险，先别进入完整方法论。",
+    "should_trigger": false
+  },
+  {
+    "query": "只修一个稳定契约下的空指针 bug，不要上升到 harness-engineering。",
+    "should_trigger": false
+  }
+]

@@ -1,0 +1,145 @@
+{
+  "skill_name": "harness-engineering",
+  "host": "codex",
+  "evals": [
+    {
+      "id": 1,
+      "name": "codex-explicit-invocation",
+      "prompt": "/harness-engineering 我们要替换核心检索组件并重做 bridge 契约。先判断 mode 和 start layer，再说你要读哪些文件。",
+      "expected_output": "Triggers the skill, classifies bootstrap, chooses Layer 0 as the smallest valid start layer, and explicitly names the next reads before any implementation.",
+      "files": [],
+      "expectations": [
+        {
+          "text": "classifies bootstrap",
+          "all": ["bootstrap"],
+          "any": [],
+          "none": []
+        },
+        {
+          "text": "starts from Layer 0",
+          "all": ["Layer 0"],
+          "any": [],
+          "none": []
+        },
+        {
+          "text": "mentions required reads",
+          "all": [],
+          "any": ["Required reads", "要读取", "read"],
+          "none": []
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "codex-layer-5-governance",
+      "prompt": "现有实现能跑，但提交流程、测试门和发布检查已经漂移。按 harness-engineering 推进这次治理修复。",
+      "expected_output": "Classifies maintenance and reopens Layer 5 rather than jumping straight to Layer 6 closure or local code edits.",
+      "files": [],
+      "expectations": [
+        {
+          "text": "classifies maintenance",
+          "all": ["maintenance"],
+          "any": [],
+          "none": []
+        },
+        {
+          "text": "starts from Layer 5",
+          "all": ["Layer 5"],
+          "any": [],
+          "none": []
+        },
+        {
+          "text": "asks for evidence or baseline",
+          "all": [],
+          "any": ["evidence", "证据", "baseline", "基线"],
+          "none": []
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "codex-near-miss-local-fix",
+      "prompt": "把这个稳定契约下的 null pointer 修一下，不要上升到完整方法论。",
+      "expected_output": "Does not force the full harness-engineering workflow and stays scoped to the local repair.",
+      "files": [],
+      "expectations": [
+        {
+          "text": "keeps the fix local or focused",
+          "all": [],
+          "any": ["local", "局部", "focused", "稳定契约"],
+          "none": []
+        },
+        {
+          "text": "does not escalate to bootstrap Layer 0",
+          "all": [],
+          "any": [],
+          "none": ["Classification: bootstrap", "starting from Layer 0", "从 Layer 0 开始"]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "decision-quality-ambiguous-start-layer",
+      "prompt": "/harness-engineering 一个 bootstrap 请求有两个合理的起始层解释。先做条件式第一性原理检查。",
+      "expected_output": "Harness runs a first-principles record before the gate.",
+      "files": [],
+      "expectations": [{"text":"routes to first principles","all":[],"any":["first-principles","first principles","第一性原理"],"none":[]},{"text":"records four fields","all":["Constraints:","Assumptions:","Falsifier:","Decision:"],"any":[],"none":[]}]
+    },
+    {
+      "id": 5,
+      "name": "decision-quality-irreversible-migration",
+      "prompt": "不可逆数据迁移会改变公开契约；在 Layer 4 gate 前同时运行第一性原理和对抗性审查。",
+      "expected_output": "Both protocols produce threats, probes, results, and residual risk.",
+      "files": [],
+      "expectations": [{"text":"runs both protocols","all":["Protocol: both"],"any":[],"none":[]},{"text":"lists three threats and probes","all":["executable probes"],"any":["three threats","three concrete ways"],"none":["not run","not executed","missing probe","probes were not run"]},{"text":"records residual risk and a gate result","all":["residual risk"],"any":["Result: pass","Result: stay","Result: rollback","Result: blocked"],"none":[]}]
+    },
+    {
+      "id": 6,
+      "name": "decision-quality-mechanical-skip",
+      "prompt": "稳定契约下只改一个拼写错误，并运行已经指定的测试。",
+      "expected_output": "Both protocols are skipped for the mechanical edit.",
+      "files": [],
+      "expectations": [{"text":"records skip","all":["Protocol: skipped"],"any":[],"none":[]},{"text":"does not run either protocol","all":[],"any":[],"none":["first-principles","first principles","adversarial"]}]
+    },
+    {
+      "id": 7,
+      "name": "decision-quality-contradiction-stay",
+      "prompt": "运行时事实与文档冲突，判断是否应回滚上游假设。",
+      "expected_output": "The gate stays or rolls back to the smallest upstream layer.",
+      "files": [],
+      "expectations": [{"text":"does not pass","all":[],"any":["Result: stay","Result: rollback"],"none":["Result: pass"]},{"text":"names the invalid assumption","all":[],"any":["invalid upstream assumption","smallest upstream layer"],"none":[]}]
+    },
+    {
+      "id": 8,
+      "name": "decision-quality-misleading-happy-path",
+      "prompt": "只有 happy-path 测试通过；要求找出误导性测试和未覆盖的错误、并发或回滚路径。",
+      "expected_output": "The review surfaces coverage gaps and a misleading test.",
+      "files": [],
+      "expectations": [{"text":"identifies misleading test","all":["misleading test"],"any":[],"none":[]},{"text":"identifies untested failure surface","all":[],"any":["untested error","untested concurrency","untested rollback"],"none":[]}]
+    },
+    {
+      "id": 9,
+      "name": "decision-quality-missing-probe",
+      "prompt": "高严重性威胁已识别，但对应 probe 尚未运行。",
+      "expected_output": "Missing high-severity evidence is blocked or not-run, never an unjustified pass.",
+      "files": [],
+      "expectations": [{"text":"blocks or marks not-run","all":[],"any":["Result: blocked","not-run","not run"],"none":[]},{"text":"does not pass","all":[],"any":[],"none":["Result: pass"]}]
+    },
+    {
+      "id": 10,
+      "name": "decision-quality-gsd-fallback",
+      "prompt": "GSD disabled, invalid, or blocked；请继续原生 Harness 决策质量流程。",
+      "expected_output": "Harness fallback continues and no autonomous or gsd-review surface is activated.",
+      "files": [],
+      "expectations": [{"text":"uses fallback","all":["fallback","Harness"],"any":[],"none":[]},{"text":"does not activate forbidden surface","all":[],"any":[],"none":["gsd-review","autonomous"]}]
+    },
+    {
+      "id": 11,
+      "name": "decision-quality-equivalent-receipt-dedup",
+      "prompt": "一个完整且已批准的 GSD receipt 已包含 constraints、assumptions、probes、result 和 residual risk。",
+      "expected_output": "The equivalent receipt satisfies the evidence contract once and avoids duplicate review.",
+      "files": [],
+      "expectations": [{"text":"accepts equivalent receipt","all":["equivalent","receipt"],"any":[],"none":[]},{"text":"avoids duplicate review","all":[],"any":["no duplicate","avoid duplicate","deduplicate"],"none":["gsd-review"]}]
+    }
+  ]
+}

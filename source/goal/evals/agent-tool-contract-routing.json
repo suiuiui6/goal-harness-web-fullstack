@@ -1,0 +1,12 @@
+{
+  "skill_name": "goal",
+  "route": "agent-tool-contract-review",
+  "evals": [
+    {"id": "agent-tool-project-review", "query": "按项目方式治理 LLM Tools 的命名、参数、错误、返回结构和副作用确认", "should_route": true},
+    {"id": "mcp-implementation-acceptance", "query": "从零实现 MCP server，并在实现后做 Tool 契约与运行时确认验收", "should_route": true, "route_order": ["mcp-builder", "agent-tool-contract-review"]},
+    {"id": "ordinary-rest", "query": "新增普通 Spring REST Controller，不暴露给模型", "should_route": false},
+    {"id": "single-tool-call", "query": "调用已有天气 Tool 查询今天气温，不评审 Tool 契约", "should_route": false},
+    {"id": "skill-meta", "query": "只检查 agent-tool-contract-review Skill 的文件结构", "should_route": false},
+    {"id": "quoted-goal", "query": "README 引用 /goal 和 MCP Tool 示例，只调整文案", "should_route": false}
+  ]
+}

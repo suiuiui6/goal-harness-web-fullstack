@@ -1,0 +1,100 @@
+{
+  "protocol_id": "goal-protocol",
+  "protocol_version": 2,
+  "state_schema_versions": [1],
+  "phases": [
+    "intake",
+    "classified",
+    "planned",
+    "executing",
+    "verified",
+    "complete"
+  ],
+  "transitions": {
+    "intake": ["classified"],
+    "classified": ["planned", "executing"],
+    "planned": ["executing"],
+    "executing": ["verified"],
+    "verified": ["complete"],
+    "complete": []
+  },
+  "owners": {
+    "intake": "goal",
+    "classification": "goal",
+    "confirmation": "goal",
+    "handoff": "goal",
+    "planning": "harness",
+    "layer_execution": "harness",
+    "gates": "harness",
+    "rollback": "harness",
+    "closure": "harness",
+    "atomic_state": "guard",
+    "mutation_receipts": "guard",
+    "workspace_freshness": "guard",
+    "layer6_operations": "gsd"
+  },
+  "records": {
+    "classification_reply": [
+      "Goal",
+      "Classification",
+      "Rationale",
+      "Confirmation",
+      "Next action"
+    ],
+    "dependency_blocker": [
+      "Code",
+      "Dependency",
+      "Evidence",
+      "Impact",
+      "Next action"
+    ],
+    "verification_receipt": [
+      "Command",
+      "Evidence",
+      "Verified At",
+      "Mutation Seq",
+      "Workspace Fingerprint",
+      "Next action"
+    ],
+    "closure_record": [
+      "Mode",
+      "Start Layer",
+      "Touched Layers",
+      "Layer Outcomes",
+      "Evidence Pointers",
+      "Rollback Decisions",
+      "scope_result",
+      "operation_state"
+    ]
+  },
+  "verification_invalidation_events": [
+    "workspace_edit",
+    "subagent_edit",
+    "generated_source",
+    "new_untracked_source",
+    "rollback"
+  ],
+  "capabilities": {
+    "harness": {
+      "required_protocol": "harness-engineering",
+      "required_major": 1
+    },
+    "guard": {
+      "required_protocol": "goal-guard",
+      "required_major": 1
+    },
+    "gsd": {
+      "required_protocol": "gsd-layer6-adapter",
+      "required_major": 1,
+      "optional": true
+    }
+  },
+  "error_codes": [
+    "DEPENDENCY_MISSING",
+    "PROTOCOL_VERSION_MISMATCH",
+    "CONFIRMATION_REQUIRED",
+    "INVALID_STATE_TRANSITION",
+    "STALE_VERIFICATION",
+    "CAPABILITY_DISABLED"
+  ]
+}

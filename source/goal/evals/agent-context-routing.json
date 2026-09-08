@@ -1,0 +1,10 @@
+{
+  "skill_name": "goal",
+  "route": "agent-context-review",
+  "evals": [
+    {"id": "agent-context-review", "query": "按项目方式治理 Agent 的长会话历史、摘要、上下文预算和工具结果", "should_route": true},
+    {"id": "ordinary-crud", "query": "新增普通字典表 CRUD 页面，不涉及 Agent、RAG 或 memory", "should_route": false},
+    {"id": "skill-meta", "query": "只评审 /goal Skill 的内部结构，不进入项目交付", "should_route": false},
+    {"id": "quoted-goal", "query": "README 中引用 `/goal` 命令，检查文档措辞即可", "should_route": false}
+  ]
+}

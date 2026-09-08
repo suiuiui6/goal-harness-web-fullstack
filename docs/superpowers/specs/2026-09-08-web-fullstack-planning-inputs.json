@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-09-08T03:32:08.556932+00:00",
+  "purpose": "Read-only implementation-planning inputs; not an implementation, package manifest, or atomic snapshot of the parallel task.",
+  "baseline_manifest_sha256": "15369c90134b75c4444fe880fab8611e9c5774b13222886c521ceb800d6fbd8a",
+  "baseline_matches": 18,
+  "additional_installed_files": [
+    {
+      "path": "C:/Users/14156/.codex/skills/goal/scripts/test_protocol.py",
+      "sha256": "088884d83ae7e63cab674710cccb67e12d796718cb3bd8ac5ad2590bb727620a",
+      "bytes": 10096
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/goal/scripts/test_validate_goal_skill.py",
+      "sha256": "5148d20c71a30c87ca0fb2dde71afde36a9cbe3f75374199a653fe7dc58e16de",
+      "bytes": 89538
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/goal/scripts/test_goal_guard_integration.py",
+      "sha256": "bc730f45efbd7abf72c36023071f1b1879621ac5c5a7058f2ba9f3be405a7129",
+      "bytes": 8164
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/goal/scripts/test_goal_skill_discovery.py",
+      "sha256": "5ea909291ae101818a06af1cf9aec9aeb7c084fe738c3dec2f42a16c17860a0c",
+      "bytes": 978
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/goal/scripts/test_agent_context_review_routing.py",
+      "sha256": "197eb9d44f6217fc2bf66a328a7f644be92c023dfc58b8e5bc980cc4f89c6d78",
+      "bytes": 1172
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/goal/scripts/test_agent_tool_contract_review_routing.py",
+      "sha256": "364a89f1472708413349866f395e582e165f8be201c7b8a4ef17a39ceab75aa3",
+      "bytes": 3089
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/goal/references/capability-discovery.md",
+      "sha256": "0aba1935db7413f4ffb8d35ef3c3680ae2f1908e035ef24b58366cdf036d2e9f",
+      "bytes": 4061
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/goal/evals/agent-context-routing.json",
+      "sha256": "f0276c14aad86e4cf54961e02de8c5de768b3f93ba3acb4d5ebf80777cb138c5",
+      "bytes": 615
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/goal/evals/agent-tool-contract-routing.json",
+      "sha256": "64c5bbf8c81e76425046cc1f5167d2e89cf2dc471a465a1a10704202ecae4382",
+      "bytes": 982
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/scripts/contract_consistency.py",
+      "sha256": "979ee75c07e2b74a1ba5c12a1e41d447e78c2cad3041fd9caa3a20d938da498a",
+      "bytes": 5793
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/scripts/render_skill_review.py",
+      "sha256": "b673dc414bc2649bf777f30b112fc8c44bedf83429916ea31c2aa8cd3ebc1081",
+      "bytes": 4826
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/scripts/test_behavior_evals.py",
+      "sha256": "bd59848d5e287f12d494aa398c11cd9092f57b2d3edab5028ac5a1cb0a26a58a",
+      "bytes": 20276
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/scripts/test_contract_consistency.py",
+      "sha256": "4e246705034b7eb0a51cdd1755c6a39d7a5853f8eb4ce80db644c01d1cfb28b2",
+      "bytes": 17314
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/scripts/test_validate_harness_skill.py",
+      "sha256": "c5be262958cc3bf55872c9054c136b449c96ff5679ec5a6fa0184bde06c1ead1",
+      "bytes": 12052
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/references/decision-quality.md",
+      "sha256": "718f9b66e6b3893d8004eb51f663d05f1a22a591967f34d1f1c6ddac83d96efe",
+      "bytes": 6838
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/adapters/codex/host-map.md",
+      "sha256": "ef6ce286d2c49389cc3f0da0a2047b6149a2771e2ab3ef72b94756ecf7dcf3ca",
+      "bytes": 1998
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/adapters/claude-code/host-map.md",
+      "sha256": "f03dd67e85e2e2081513ea5b62e1b26016bb2b23b2c9377668a6ed1adb2e7365",
+      "bytes": 1911
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/core/exit-and-reentry.md",
+      "sha256": "f199ff725f4ba64f10ba6c46d94e46260977904fc932caae98d44c0a06ec7b41",
+      "bytes": 2342
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/REQUIRED-EXECUTION-RECORD.template.md",
+      "sha256": "b4b1fcdc2997b2389afe5a94b2712e55749cf2ba85a1b02ef6b9058210969b38",
+      "bytes": 3858
+    },
+    {
+      "path": "C:/Users/14156/plugins/goal-enforcement/tests/test_goal_guard.py",
+      "sha256": "cd08b7c7ab88822077bd2004aa56a2b7c564501b13ae94c4143c4d9f08d61cd0",
+      "bytes": 77987
+    },
+    {
+      "path": "C:/Users/14156/plugins/goal-enforcement/tests/test_plugin_contract.py",
+      "sha256": "0a0a1a6f9cddeea39c04e3bf775fd9d44d603210e23a8110c70acc618e16ae20",
+      "bytes": 1179
+    }
+  ],
+  "parallel_task": {
+    "thread_id": "01a07b9b-9b28-7740-88ed-17669c42b6b9",
+    "title": "完成 Goal Harness 下一阶段开发",
+    "status_observed": "inProgress",
+    "repository": "C:/Users/14156/.codex/workspaces/goal-protocol-v2/repo",
+    "head_observed": "ea4365a1f19f5a0a2642aa660c59af95cc69a05d",
+    "status_output": [
+      "?? docs/reviews/"
+    ],
+    "warning": ".pytest_cache directory could not be read; not a complete worktree audit",
+    "interface_observed": "commit_state(workspace, *, expected_revision, actor, operation, transform, allow_create=False, audit_current_workspace=True)",
+    "action": "read-only; no messages, stop, writes or source integration"
+  },
+  "environment": {
+    "python": "3.14.3",
+    "pytest": "9.0.3",
+    "tiktoken": "0.13.0",
+    "playwright": "1.59.0",
+    "chromium_executable_exists_observed": true,
+    "browser_launch": "not-run",
+    "fullstack_fixture": "not-run",
+    "enforcement": "audit-only-windows"
+  },
+  "approval": {
+    "source": "current task user message",
+    "text": "同意该设计",
+    "scope": "approved design including structural integration; implementation plan and installation not yet authorized"
+  },
+  "limits": [
+    "Only listed installed files are hashed; full source manifest is Task 1.",
+    "Parallel source observation is a time-specific coordination input, not the selected baseline.",
+    "No runtime tests, context token measurement or installations were performed."
+  ]
+}

@@ -1,0 +1,4 @@
+[
+  {"id":"WF-01","level":"contract"},{"id":"WF-02","level":"contract"},{"id":"WF-03","level":"contract"},{"id":"WF-04","level":"contract"},{"id":"WF-05","level":"contract"},{"id":"WF-06","level":"contract"},{"id":"WF-07","level":"contract"},{"id":"WF-08","level":"contract"},{"id":"WF-09","level":"contract"},{"id":"WF-10","level":"contract"},{"id":"WF-11","level":"contract"},{"id":"WF-12","level":"contract"},{"id":"WF-13","level":"contract"},{"id":"WF-14","level":"contract"},{"id":"WF-15","level":"contract"},{"id":"WF-16","level":"contract"},{"id":"WF-17","level":"contract"},
+  {"id":"SC-01","level":"event_replay"},{"id":"SC-02","level":"event_replay"},{"id":"SC-03","level":"event_replay"},{"id":"SC-04","level":"event_replay"},{"id":"SC-05","level":"event_replay"},{"id":"SC-06","level":"event_replay"},{"id":"SC-07","level":"event_replay"},{"id":"SC-08","level":"event_replay"}
+]

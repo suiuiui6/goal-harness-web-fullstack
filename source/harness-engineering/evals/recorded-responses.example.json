@@ -1,0 +1,10 @@
+{
+  "responses": [
+    {
+      "eval_id": 1,
+      "response_path": "../../external-eval-workspace/codex-explicit-invocation/response.md",
+      "model": "example-model",
+      "timestamp": "2000-01-01T00:00:00Z"
+    }
+  ]
+}

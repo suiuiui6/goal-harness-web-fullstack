@@ -1,0 +1,151 @@
+{
+  "skill_name": "harness-engineering",
+  "host": "claude-code",
+  "evals": [
+    {
+      "id": 101,
+      "name": "claude-explicit-invocation",
+      "prompt": "/harness-engineering We are replacing a core component and need layer gates plus minimal rollback. Tell me the correct starting layer before code and make the mode explicit.",
+      "expected_output": "Triggers the skill, classifies bootstrap, chooses Layer 0 as the smallest valid start layer, and keeps coding blocked until classification is explicit.",
+      "files": [],
+      "expectations": [
+        {
+          "text": "classifies bootstrap",
+          "all": ["bootstrap"],
+          "any": [],
+          "none": []
+        },
+        {
+          "text": "starts from Layer 0",
+          "all": ["Layer 0"],
+          "any": [],
+          "none": []
+        },
+        {
+          "text": "mentions evidence, gates, or proof",
+          "all": [],
+          "any": ["evidence", "gate", "proof"],
+          "none": []
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "name": "claude-claude-md-entry",
+      "prompt": "严格按照仓库里的 CLAUDE.md 推进这次 bridge topology 调整：把事件总线接到新的处理链路里，但先判断应该从哪一层重入。",
+      "expected_output": "Treats CLAUDE.md as a valid host entry surface and classifies maintenance from Layer 2 because this is a bridge or topology change before execution.",
+      "files": [],
+      "expectations": [
+        {
+          "text": "classifies maintenance",
+          "all": ["maintenance"],
+          "any": [],
+          "none": []
+        },
+        {
+          "text": "starts from Layer 2",
+          "all": ["Layer 2"],
+          "any": [],
+          "none": []
+        },
+        {
+          "text": "mentions bridge or topology",
+          "all": [],
+          "any": ["bridge", "topology", "拓扑"],
+          "none": []
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "name": "claude-agent-discipline",
+      "prompt": "/harness-engineering This work may need agents, but do not let delegation skip layer gates or closure fields.",
+      "expected_output": "Uses delegation as a controlled host behavior and preserves gate discipline plus canonical closure fields.",
+      "files": [],
+      "expectations": [
+        {
+          "text": "mentions agent delegation",
+          "all": [],
+          "any": ["Agent", "delegation", "delegate"],
+          "none": []
+        },
+        {
+          "text": "preserves scope_result",
+          "all": ["scope_result"],
+          "any": [],
+          "none": []
+        },
+        {
+          "text": "preserves operation_state",
+          "all": ["operation_state"],
+          "any": [],
+          "none": []
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "name": "claude-decision-quality-ambiguous-start-layer",
+      "prompt": "A bootstrap request has two plausible start layers; run the conditional first-principles check.",
+      "expected_output": "Harness runs a first-principles record before the gate.",
+      "files": [],
+      "expectations": [{"text":"routes to first principles","all":[],"any":["first-principles","first principles"],"none":[]},{"text":"records four fields","all":["Constraints:","Assumptions:","Falsifier:","Decision:"],"any":[],"none":[]}]
+    },
+    {
+      "id": 105,
+      "name": "claude-decision-quality-irreversible-migration",
+      "prompt": "An irreversible migration changes a public contract; run both protocols before the Layer 4 gate.",
+      "expected_output": "Both protocols produce threats, probes, results, and residual risk.",
+      "files": [],
+      "expectations": [{"text":"runs both protocols","all":["Protocol: both"],"any":[],"none":[]},{"text":"lists three threats and probes","all":["executable probes"],"any":["three threats","three concrete ways"],"none":["not run","not executed","missing probe","probes were not run"]},{"text":"records residual risk and a gate result","all":["residual risk"],"any":["Result: pass","Result: stay","Result: rollback","Result: blocked"],"none":[]}]
+    },
+    {
+      "id": 106,
+      "name": "claude-decision-quality-mechanical-skip",
+      "prompt": "Only fix a spelling typo under a stable contract and run the named test.",
+      "expected_output": "Both protocols are skipped for the mechanical edit.",
+      "files": [],
+      "expectations": [{"text":"records skip","all":["Protocol: skipped"],"any":[],"none":["first-principles","first principles","adversarial"]}]
+    },
+    {
+      "id": 107,
+      "name": "claude-decision-quality-contradiction-stay",
+      "prompt": "Runtime facts contradict the docs; decide whether to roll back the upstream assumption.",
+      "expected_output": "The gate stays or rolls back to the smallest upstream layer.",
+      "files": [],
+      "expectations": [{"text":"does not pass","all":[],"any":["Result: stay","Result: rollback"],"none":["Result: pass"]},{"text":"names the invalid assumption","all":[],"any":["invalid upstream assumption","smallest upstream layer"],"none":[]}]
+    },
+    {
+      "id": 108,
+      "name": "claude-decision-quality-misleading-happy-path",
+      "prompt": "Only happy-path tests pass; find the misleading test and an untested error, concurrency, or rollback path.",
+      "expected_output": "The review surfaces coverage gaps and a misleading test.",
+      "files": [],
+      "expectations": [{"text":"identifies misleading test","all":["misleading test"],"any":[],"none":[]},{"text":"identifies untested failure surface","all":[],"any":["untested error","untested concurrency","untested rollback"],"none":[]}]
+    },
+    {
+      "id": 109,
+      "name": "claude-decision-quality-missing-probe",
+      "prompt": "A high-severity threat has no executed probe.",
+      "expected_output": "Missing high-severity evidence is blocked or not-run, never an unjustified pass.",
+      "files": [],
+      "expectations": [{"text":"blocks or marks not-run","all":[],"any":["Result: blocked","not-run","not run"],"none":[]},{"text":"does not pass","all":[],"any":[],"none":["Result: pass"]}]
+    },
+    {
+      "id": 110,
+      "name": "claude-decision-quality-gsd-fallback",
+      "prompt": "GSD is unavailable, invalid, or blocked; continue the native Harness protocol.",
+      "expected_output": "Harness fallback continues and no autonomous or gsd-review surface is activated.",
+      "files": [],
+      "expectations": [{"text":"uses fallback","all":["fallback","Harness"],"any":[],"none":[]},{"text":"does not activate forbidden surface","all":[],"any":[],"none":["gsd-review","autonomous"]}]
+    },
+    {
+      "id": 111,
+      "name": "claude-decision-quality-equivalent-receipt-dedup",
+      "prompt": "An approved GSD receipt already contains constraints, assumptions, probes, result, and residual risk.",
+      "expected_output": "The equivalent receipt satisfies the evidence contract once and avoids duplicate review.",
+      "files": [],
+      "expectations": [{"text":"accepts equivalent receipt","all":["equivalent","receipt"],"any":[],"none":[]},{"text":"avoids duplicate review","all":[],"any":["no duplicate","avoid duplicate","deduplicate"],"none":["gsd-review"]}]
+    }
+  ]
+}

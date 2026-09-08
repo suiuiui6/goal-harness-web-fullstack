@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "files": [
+    "source/goal/SKILL.md",
+    "source/goal/references",
+    "source/goal/scripts",
+    "source/goal/evals",
+    "source/harness-engineering/SKILL.md",
+    "source/harness-engineering/references",
+    "source/harness-engineering/core",
+    "source/harness-engineering/adapters",
+    "source/harness-engineering/scripts",
+    "source/harness-engineering/evals",
+    "source/goal-enforcement/scripts",
+    "source/goal-enforcement/hooks.json",
+    "source/deployment/AGENTS.md"
+  ]
+}

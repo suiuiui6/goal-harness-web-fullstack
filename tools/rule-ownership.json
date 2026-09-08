@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "rules": [
+    {
+      "rule_id": "goal.classification",
+      "owner": "goal",
+      "canonical": "source/goal/references/protocol.json",
+      "consumers": [
+        "source/goal/SKILL.md",
+        "source/goal/references/output-contract.md"
+      ],
+      "required_from": "A",
+      "depends_on": []
+    },
+    {
+      "rule_id": "goal.delivery-contract",
+      "owner": "goal",
+      "canonical": "source/goal/references/delivery-contract.md",
+      "consumers": [
+        "source/goal/SKILL.md",
+        "source/harness-engineering/references/web-fullstack-delivery.md"
+      ],
+      "required_from": "C",
+      "depends_on": [
+        "guard.delivery-shape"
+      ]
+    },
+    {
+      "rule_id": "guard.delivery-shape",
+      "owner": "goal-enforcement",
+      "canonical": "source/goal-enforcement/scripts/delivery_contract.py",
+      "consumers": [
+        "tools/render_delivery_reference.py"
+      ],
+      "required_from": "A",
+      "depends_on": []
+    },
+    {
+      "rule_id": "guard.delivery-transition",
+      "owner": "goal-enforcement",
+      "canonical": "source/goal-enforcement/scripts/delivery_rules.py",
+      "consumers": [
+        "source/goal-enforcement/scripts/goal_guard.py"
+      ],
+      "required_from": "B",
+      "depends_on": [
+        "guard.delivery-shape"
+      ]
+    },
+    {
+      "rule_id": "harness.delivery-acceptance",
+      "owner": "harness-engineering",
+      "canonical": "source/harness-engineering/references/web-fullstack-delivery.md",
+      "consumers": [
+        "source/harness-engineering/core/checklists.md",
+        "source/harness-engineering/references/output-contract.md"
+      ],
+      "required_from": "C",
+      "depends_on": [
+        "goal.delivery-contract"
+      ]
+    },
+    {
+      "rule_id": "harness.layer-flow",
+      "owner": "harness-engineering",
+      "canonical": "source/harness-engineering/core/flow.md",
+      "consumers": [
+        "source/harness-engineering/core/checklists.md",
+        "source/harness-engineering/core/exit-and-reentry.md"
+      ],
+      "required_from": "A",
+      "depends_on": []
+    },
+    {
+      "rule_id": "harness.load-policy",
+      "owner": "harness-engineering",
+      "canonical": "source/harness-engineering/references/load-policy.json",
+      "consumers": [
+        "source/harness-engineering/references/runtime-stages.md",
+        "source/harness-engineering/references/domain-routing.md"
+      ],
+      "required_from": "C",
+      "depends_on": []
+    },
+    {
+      "rule_id": "harness.closure",
+      "owner": "harness-engineering",
+      "canonical": "source/harness-engineering/references/output-contract.md",
+      "consumers": [
+        "source/goal/references/output-contract.md"
+      ],
+      "required_from": "A",
+      "depends_on": [
+        "harness.delivery-acceptance"
+      ]
+    },
+    {
+      "rule_id": "guard.state-write",
+      "owner": "goal-enforcement",
+      "canonical": "source/goal-enforcement/scripts/goal_guard.py",
+      "consumers": [
+        "source/goal/references/host-modes.md"
+      ],
+      "required_from": "B",
+      "depends_on": [
+        "guard.delivery-transition"
+      ]
+    }
+  ]
+}

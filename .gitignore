@@ -1,0 +1,9 @@
+.codex/
+**/__pycache__/
+*.pyc
+.pytest_cache/
+artifacts/release/
+artifacts/evals/test-contract.json
+artifacts/context-measurement.json
+source/.test-work/
+tmp*/

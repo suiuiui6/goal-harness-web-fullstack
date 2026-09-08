@@ -1,0 +1,3 @@
+<!doctype html>
+<label for="note">Note</label><input id="note"><button id="save">Save</button><div data-testid="notes"></div>
+<script>const list=async()=>{const d=await (await fetch('/api/notes')).json();document.querySelector('[data-testid=notes]').innerHTML=d.notes.map(x=>`<div>${x}</div>`).join('')};document.querySelector('#save').onclick=async()=>{await fetch('/api/notes',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:document.querySelector('#note').value})});list()};list();</script>

@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-09-08T05:00:00Z",
+  "host": "codex",
+  "enforcement_mode": "audit-only-windows",
+  "measurement": {
+    "encoding": "o200k_base",
+    "bytes": "raw UTF-8",
+    "lines": "decoded text splitlines",
+    "different_files_with_equal_content_are_distinct": true,
+    "aliases_of_the_same_resolved_file_are_deduplicated": true
+  },
+  "scenarios": [
+    {
+      "id": "SC-01",
+      "prompt": "Create a new Web full-stack project without prescribing a framework.",
+      "confirmation_boundary": "bootstrap confirmation required"
+    },
+    {
+      "id": "SC-02",
+      "prompt": "Add an API-only business flow to an existing full-stack application and reuse UI and deployment.",
+      "confirmation_boundary": "maintenance evidence before mutation"
+    },
+    {
+      "id": "SC-03",
+      "prompt": "Classify the request and stop before Harness handoff.",
+      "confirmation_boundary": "classification-only"
+    },
+    {
+      "id": "SC-04",
+      "prompt": "Proceed to the first governed mutation and load only references required before that operation.",
+      "confirmation_boundary": "governed mutation"
+    },
+    {
+      "id": "SC-05",
+      "prompt": "Compare Agent context and MCP tool routes with an ordinary REST change.",
+      "confirmation_boundary": "specialist route only when triggered"
+    },
+    {
+      "id": "SC-06",
+      "prompt": "Accept equivalent explanations but reject missing fields, invalid enums, forged confirmation, incompatible protocol, and unsafe actions.",
+      "confirmation_boundary": "strict structural and safety invariants"
+    }
+  ],
+  "stages": {
+    "S1": {
+      "cutoff": "first classification reply and confirmation boundary",
+      "required": [
+        "goal/SKILL.md",
+        "goal/references/protocol.json",
+        "goal/references/output-contract.md",
+        "goal/references/layer-execution.md"
+      ]
+    },
+    "S2": {
+      "cutoff": "Harness handoff before first governed mutation",
+      "required": [
+        "harness-engineering/SKILL.md",
+        "harness-engineering/references/runtime-stages.md",
+        "harness-engineering/core/flow.md",
+        "harness-engineering/adapters/codex/host-map.md",
+        "harness-engineering/core/checklists.md",
+        "harness-engineering/core/exit-and-reentry.md",
+        "harness-engineering/references/output-contract.md"
+      ]
+    },
+    "S3": {
+      "cutoff": "immediately before first governed mutation",
+      "required": [
+        "goal/references/capability-discovery.md",
+        "goal/references/host-modes.md",
+        "goal/scripts/protocol.py"
+      ]
+    }
+  },
+  "observed_reads": [],
+  "limitations": [
+    "Normative full-file inputs are frozen here; actual Agent read events remain not-run until observed event input exists.",
+    "This measures Skill context volume, not a model bill or success-rate improvement."
+  ]
+}

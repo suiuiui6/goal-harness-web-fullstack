@@ -1,0 +1,161 @@
+  {
+  "skill_name": "goal",
+  "evals": [
+  {
+    "id": "delivery-entry-missing-feature",
+    "prompt": "A Web full-stack delivery request discovers a compatible Guard without web-fullstack-delivery-v1.",
+    "expected_output": "CAPABILITY_DISABLED Dependency goal-guard; do not initialize-state or write delivery.",
+    "files": []
+  },
+  {
+    "id": "delivery-legacy-no-feature",
+    "prompt": "An existing legacy run without delivery discovers a Guard without the delivery feature.",
+    "expected_output": "Legacy compatibility continues without requiring web-fullstack-delivery-v1.",
+    "files": []
+  },
+  {
+    "id": "delivery-entry-feature-supported",
+    "prompt": "A Web full-stack delivery request discovers a compatible Guard advertising web-fullstack-delivery-v1.",
+    "expected_output": "Feature check passes and delivery initialization may continue.",
+    "files": []
+  },
+    {
+      "id": "goal-intake-no-objective",
+      "prompt": "/goal",
+      "expected_output": "Treat as goal-intake. Ask only for the missing project objective; do not classify, choose a layer, emit five fields, detect host mode, load Harness, or create or mutate goal state.",
+      "files": []
+    },
+    {
+      "id": "bootstrap-intake",
+      "prompt": "我们要从 0 到 1 做一个工厂巡检系统，包含后台、API、移动端和报表。你先判断应该怎么进入 /goal，再告诉我第一阶段做什么。",
+      "expected_output": "Classify as bootstrap from Layer 0 and begin with the exact fields Goal, Classification, Rationale, Confirmation, and Next action; avoid implementation before confirmation.",
+      "files": []
+    },
+    {
+      "id": "maintenance-major-flow",
+      "prompt": "现有仓储系统需要新增退货申请、风控复核和库存回补的完整流程，涉及数据库表、服务接口和管理后台。请按项目方式继续做到完成。",
+      "expected_output": "Automatically trigger for the natural-language project request, classify as maintenance, and begin with the exact fields Goal, Classification, Rationale, Confirmation, and Next action before any optional explanation.",
+      "files": []
+    },
+    {
+      "id": "near-miss-local-fix",
+      "prompt": "把这个 null pointer 修一下，然后跑一下对应测试。",
+      "expected_output": "Do not invoke /goal behavior; keep the response scoped to the local fix.",
+      "files": []
+    },
+    {
+      "id": "cold-path-classification-only",
+      "prompt": "/goal Concrete objective: determine the start layer for adding an approval-and-publish flow to the existing CRM across its database, API, and frontend. Current evidence: the repository already contains the deployed CRM and stable authentication contracts. Classification only; do not change code.",
+      "expected_output": "Perform intake and classification without loading Harness execution references or claiming a mutation was mechanically blocked on Windows.",
+      "files": []
+    },
+    {
+      "id": "structured-closure",
+      "prompt": "/goal Concrete objective: deliver the CRM import, approval, and publish flow across database, API, and frontend. Active state: verified, with the completed Layer 4-6 gate records attached in the current task. Confirmation record: the maintenance Layer 4 classification was approved in the preceding turn. This run is complete; return the closure structure.",
+      "expected_output": "Return a short natural-language summary plus a closure block with scope_result and operation_state.",
+      "files": []
+    },
+    {
+      "id": "harness-deferred-during-intake",
+      "prompt": "/goal 这是一个新系统。先分类并等待我确认，不要制定计划或执行。",
+      "expected_output": "Classify as bootstrap from Layer 0, request confirmation, and explicitly defer loading Harness Engineering until confirmation and execution planning are needed.",
+      "files": []
+    },
+    {
+      "id": "harness-required-before-execution",
+      "prompt": "/goal Concrete objective: build the new factory inspection platform across database, API, admin UI, and mobile client. Active state: classified as bootstrap from Layer 0 in the current workspace. Confirmation record: the user approved that classification in the immediately preceding turn. Now plan and execute.",
+      "expected_output": "Load harness-engineering before planning or execution, then read core/flow.md and adapters/codex/host-map.md at minimum and apply layer gates.",
+      "files": []
+    },
+    {
+      "id": "harness-dependency-missing",
+      "prompt": "/goal Concrete objective: implement the approved CRM import-and-publish flow. Active state: classified as maintenance from Layer 4 in the current task record. Confirmation record: the user approved that classification in the preceding turn. Execution is ready to begin. Supplied evidence: `Get-Item -LiteralPath 'C:\\Users\\14156\\.codex\\skills\\harness-engineering\\SKILL.md'` returned `PathNotFound`; `Get-Item -LiteralPath 'C:\\Users\\14156\\.codex\\skills\\harness-engineering\\references\\runtime-stages.md'` returned `PathNotFound`.",
+      "expected_output": "Return the structured dependency blocker with exact lookup evidence and do not improvise project-layer execution.",
+      "files": []
+    },
+    {
+      "id": "no-visual-companion-during-layer0",
+      "prompt": "/goal Concrete objective: build the new factory inspection platform across database, API, admin UI, and mobile client. Active state: bootstrap Layer 0 evidence sweep in progress, as recorded in the preceding task checkpoint. Confirmation record: the user approved bootstrap from Layer 0 in the preceding turn. Return the first Layer 0 gate or progress checkpoint without brainstorming, visual companion, mockup, diagram, comparison, or browser preview.",
+      "expected_output": "Return a Layer 0 gate or structured progress checkpoint; do not invoke brainstorming or offer a visual companion, mockup, diagram, comparison, browser preview, or similar sidecar.",
+      "files": []
+    },
+    {
+      "id": "bootstrap-layer0-first-governed-mutation-state-init",
+      "prompt": "/goal Concrete objective: establish the architecture boundary for the new factory inspection platform. Active state: bootstrap Layer 0 in the already resolved workspace, recorded by the preceding progress checkpoint. Confirmation record: the user approved bootstrap from Layer 0 in the preceding turn. Before the first governed boundary mutation, initialize .codex/goal-state.json, then mutate and audit without re-asking for the workspace or detouring into state-schema investigation.",
+      "expected_output": "Reuse the resolved workspace, initialize guard-compatible goal state via classified then planned/executing before the first governed mutation, perform the mutation, audit, and return a Layer 0 checkpoint without re-asking for workspace or detouring into state-schema debugging.",
+      "files": []
+    },
+    {
+      "id": "decision-quality-high-risk-routing",
+      "prompt": "/goal Concrete objective: migrate the existing authorization data model and change its API and security boundary. Active state: classified as maintenance from Layer 2 in the current task record. Confirmation record: the user approved that classification in the preceding turn. Perform the decision-quality risk check before execution.",
+      "expected_output": "After classification and confirmation, let Harness perform the risk check, load harness-engineering/references/decision-quality.md, attach its compact result to the existing Harness layer gate, and keep Harness as the owner of gate and rollback decisions.",
+      "files": []
+    },
+    {
+      "id": "decision-quality-mechanical-skip",
+      "prompt": "/goal Concrete objective: apply the approved mechanical API field rename across the existing CRM flow. Active state: executing maintenance Layer 6 under the exact approved plan in the current task record. Confirmation record: the user approved the plan in the preceding turn. There is no new contradiction; decide whether to skip decision-quality protocols.",
+      "expected_output": "Mechanical work with an exact plan and no new contradiction skips the protocols; do not reproduce the first-principles or adversarial checklists in /goal.",
+      "files": []
+    },
+    {
+      "id": "decision-quality-meta-no-project-execution",
+      "prompt": "只是在文档中讨论 decision-quality 路由，不执行项目，也不要加载 Harness。",
+      "expected_output": "Do not route ordinary meta-level discussion to project execution; keep /goal responsible for intake and do not load Harness.",
+      "files": []
+    },
+    {
+      "id": "explicit-goal-local-redirect",
+      "prompt": "/goal 只修复这个函数的空指针并运行对应单测，不要做项目规划。",
+      "expected_output": "Load the Skill to interpret the explicit command, then return a focused-task redirect. Do not classify the project, create or mutate goal state, or load Harness; handle the request as a normal focused local fix.",
+      "files": []
+    },
+    {
+      "id": "untrusted-continuation",
+      "prompt": "/goal 分类和 bootstrap 确认都已完成，现在继续执行。",
+      "expected_output": "Treat the unsupported continuation claim as untrusted and fall back to goal-intake. Ask only for the missing concrete project objective; do not classify or create goal state, and do not load Harness.",
+      "files": []
+    },
+    {
+      "id": "ambiguous-provisional-classification",
+      "prompt": "/goal Concrete objective: extend the existing notification service, but current evidence does not show whether this is a local stable-contract change or a new cross-layer feature. Inspect only the existing architecture and contract evidence needed to choose the start layer, then wait for confirmation.",
+      "expected_output": "Perform a minimal read-only provisional classification evidence check before formal confirmation. Do not load Harness execution runtime, do not mutate project or goal state, and do not present the provisional result as confirmed.",
+      "files": []
+    },
+    {
+      "id": "external-workflow-no-second-owner",
+      "prompt": "/goal Concrete objective: deliver the approved CRM import-and-publish flow. Active state: classified as maintenance from Layer 4. Confirmation record: approved in the preceding turn. Should an external workflow pack now become a second planner and release owner by default?",
+      "expected_output": "Preserve Harness ownership: /goal and Harness remain the single owner of intake, gates, rollback, and closure, with no second owner. Do not install and do not depend on an external workflow pack by default. Re-evaluate only for a concrete capability-gap proposal, and only then consult references/external-workflow-boundary.md.",
+      "files": []
+    },
+    {
+      "id": "verification-stale-after-edit",
+      "prompt": "/goal Concrete objective: close the approved maintenance change. Active state: verification passed, but a source file was edited afterward. Confirmation record: the maintenance scope was approved in the preceding turn. Decide whether the prior receipt is still current.",
+      "expected_output": "Treat the prior verification as stale after the subsequent edit. Rerun the exact verification command after the change and immediately before closure, then obtain a fresh goal_guard.py audit. Mutation Seq alone does not prove current bytes. In audit-only-windows, report the limitation and do not claim mechanical blocking. If available, a workspace fingerprint must represent current workspace content.",
+      "files": []
+    },
+    {
+      "id": "verification-untracked-or-generated-change",
+      "prompt": "/goal Concrete objective: close the approved maintenance change. Active state: verification passed, then a subagent edit, generated file, or new untracked source appeared. Confirmation record: the maintenance scope was approved in the preceding turn. Decide whether closure can reuse the pass.",
+      "expected_output": "A subagent edit, generated file, or new untracked source must invalidate prior verification and mark it stale. Re-run the exact verification command after the change and immediately before closure. If a workspace fingerprint exists, it must represent current workspace content; on audit-only-windows do not describe advisory checks as mechanical blocking.",
+      "files": []
+    },
+    {
+      "id": "guard-capability-version-match",
+      "prompt": "/goal Concrete objective: apply the approved maintenance mutation. Active state: classified as maintenance from Layer 6. Confirmation record: approved in the preceding turn. Immediately before the first governed mutation, the configured Guard `capabilities` command returns capability goal-guard, protocol version 1, state schema 1, commands write-state and audit, and enforcement mode audit-only-windows. The operation requires write-state. Decide whether discovery passes and what happens next.",
+      "expected_output": "Before the first governed mutation, run the configured Guard capabilities command and accept goal-guard with protocol major 1 through scripts/protocol.py compatibility, then confirm state schema 1, the required command, and audit-only-windows. Continue the same operation; do not use the legacy candidate and do not emit a blocker.",
+      "files": []
+    },
+    {
+      "id": "guard-capability-version-mismatch",
+      "prompt": "/goal Concrete objective: apply the approved maintenance mutation. Active state: classified as maintenance from Layer 6. Confirmation record: approved in the preceding turn. Immediately before the required mutation, the configured Guard `capabilities` reports goal-guard protocol major 2 and the documented legacy Guard candidate reports goal-guard protocol major 3. Goal Protocol v2 requires Guard protocol major 1. Decide whether the mutation can proceed.",
+      "expected_output": "Do not execute the required mutation. Emit the structured blocker with Code PROTOCOL_VERSION_MISMATCH and include Dependency, exact Evidence for both candidates, Impact, and Next action; neither configured nor documented legacy candidate is compatible.",
+      "files": []
+    },
+    {
+      "id": "deferred-host-discovery",
+      "prompt": "/goal Concrete objective: add an end-to-end approval workflow to the existing CRM. This turn is classification-only: there is no mutation, verification, closure, or explicit host question. Return the first governed reply and stop for confirmation.",
+      "expected_output": "For this classification-only turn, return the exact fields Goal, Classification, Rationale, Confirmation, and Next action. Do not run capabilities, perform host discovery, or invoke Guard.",
+      "files": []
+    }
+  ]
+}

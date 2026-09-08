@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-09-08T02:20:31.981998+00:00",
+  "purpose": "Read-only installed .codex content baseline for the approved Web full-stack first-release design; not a release manifest or proof of implementation.",
+  "workspace": "C:/Users/14156/Documents/Codex/goal-harness-web-fullstack",
+  "classification": {
+    "mode": "maintenance",
+    "start_layer": 4
+  },
+  "enforcement_mode": "audit-only-windows",
+  "files": [
+    {
+      "path": "C:/Users/14156/.codex/skills/goal/SKILL.md",
+      "sha256": "a19496d573876fdceb8c1d842a196246b800ec5672c3c7501217b4fb228e39ed",
+      "bytes": 10562
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/goal/references/protocol.json",
+      "sha256": "4f1b8774c10ce02856dae84e8b55ec15a10cb91baccfe4713522e5edd20e502f",
+      "bytes": 2148
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/goal/references/output-contract.md",
+      "sha256": "30dc7abd5398a3bf3bd9527880dbea19c2ba43fb0d72cb6441fd6bcf25e20be6",
+      "bytes": 8167
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/goal/references/layer-execution.md",
+      "sha256": "4aedf3d97ff325bb2cb98ecfa374e3eed6530e7d47fc2acf61d986762305e3c3",
+      "bytes": 1737
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/goal/references/host-modes.md",
+      "sha256": "7985e1c634a08b3366038246e9101b310a668bb8a7a49b0c810e95ac7591a32e",
+      "bytes": 5798
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/goal/scripts/protocol.py",
+      "sha256": "90614350027afbd738295b96fc44bcf5cdba29586b841eec55e8cea5ec89e331",
+      "bytes": 9037
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/goal/scripts/validate_goal_skill.py",
+      "sha256": "2cb72434c9c9fbd776f926e0948e3d900f2d3d1e215cae93e056b8325e69a214",
+      "bytes": 34911
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/SKILL.md",
+      "sha256": "f4a530c0f92cabbc59d3f85cc2393eab1c5b0843e81b0ade363808a882d984ae",
+      "bytes": 3540
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/SPEC.md",
+      "sha256": "0e205955f185c600d7ccee5b78b252492948c7cd2567e42a4a425afb01395958",
+      "bytes": 13782
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/core/flow.md",
+      "sha256": "fcd013f63801fdb88a64fecbeba5deeb54f6d5149bc7c53927afc435da603348",
+      "bytes": 5232
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/core/checklists.md",
+      "sha256": "e7ce5809bc48d329bb17d790fdb04ece4b84370d00edac3344a05c4234657971",
+      "bytes": 4799
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/core/layer-details.md",
+      "sha256": "49257c4863a4a4044ec19d390515447ee350f019fb5485e237215741326d7df7",
+      "bytes": 4915
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/references/runtime-stages.md",
+      "sha256": "ef848f4cfd6f0c9261737c59169b3996d51c3ef4ced42f23e47452faa5d119e7",
+      "bytes": 2449
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/references/output-contract.md",
+      "sha256": "594ce4ede53fa180f2fe0b25e4defaecf180353426837e314bdc8a73b8dc9941",
+      "bytes": 3475
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/scripts/behavior_evals.py",
+      "sha256": "859e579a38ddb1b23f324c4ae178270e82fe1ce5b1657e89c6981438f582eb29",
+      "bytes": 10661
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/scripts/validate_harness_skill.py",
+      "sha256": "1889dd625d821985a39766137bbb79de2563411430799f4d5b550f023d100a43",
+      "bytes": 10375
+    },
+    {
+      "path": "C:/Users/14156/.codex/skills/harness-engineering/evals/contract-invariants.json",
+      "sha256": "3d3d57ad04e86f8f885faffec3a5c99ed705a96030ab06742ef18c474c5a99a6",
+      "bytes": 7696
+    },
+    {
+      "path": "C:/Users/14156/plugins/goal-enforcement/scripts/goal_guard.py",
+      "sha256": "26417264a321451658e224e29c318030bc49d34644a175a96938f6e50553c353",
+      "bytes": 85399
+    }
+  ],
+  "known_baseline_constraints": [
+    "Goal Protocol v2 currently advertises state schema 1 only; the state schema v2 document is a future implementation plan.",
+    "The .agents source was disabled by an earlier user-authorized configuration change; this design must not re-enable it.",
+    "Goal Protocol JSON permits classified -> executing, but the installed Guard rejected that transition as non-adjacent during this documentation run. This run used classified -> planned -> executing; later compatibility work must reconcile the discrepancy explicitly.",
+    "Guard fingerprints and command hashes prove limited consistency, not honest execution or product correctness.",
+    "No Git repository was initialized, no branch or commit was created, and no installed skill source was modified for this document."
+  ]
+}

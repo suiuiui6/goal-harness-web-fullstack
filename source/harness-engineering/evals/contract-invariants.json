@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "invariants": [
+    {
+      "id": "entry-classification",
+      "documents": [
+        {
+          "path": "SPEC.md",
+          "required_any": [
+            [
+              "bootstrap mode",
+              "bootstrap"
+            ],
+            [
+              "maintenance mode",
+              "maintenance"
+            ]
+          ]
+        },
+        {
+          "path": "PHASES.md",
+          "required_any": [
+            [
+              "phase 0"
+            ],
+            [
+              "classification"
+            ],
+            [
+              "bootstrap",
+              "maintenance"
+            ]
+          ]
+        },
+        {
+          "path": "core/flow.md",
+          "required_any": [
+            [
+              "entry classification",
+              "classify the request"
+            ]
+          ]
+        },
+        {
+          "path": "references/runtime-stages.md",
+          "required_any": [
+            [
+              "classify `bootstrap` vs `maintenance`",
+              "classify incoming work as bootstrap mode or maintenance mode"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evidence-before-advance",
+      "documents": [
+        {
+          "path": "SPEC.md",
+          "required_any": [
+            [
+              "evidence before advancement",
+              "pass evidence"
+            ]
+          ]
+        },
+        {
+          "path": "PHASES.md",
+          "required_any": [
+            [
+              "pass evidence",
+              "current-layer pass evidence"
+            ]
+          ]
+        },
+        {
+          "path": "core/flow.md",
+          "required_any": [
+            [
+              "next layer",
+              "move to the next layer",
+              "move forward"
+            ],
+            [
+              "pass criteria",
+              "pass evidence",
+              "gate pass"
+            ]
+          ]
+        },
+        {
+          "path": "CHECKS.md",
+          "required_any": [
+            [
+              "gate pass",
+              "no forward movement before gate pass"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "minimal-rollback",
+      "documents": [
+        {
+          "path": "SPEC.md",
+          "required_any": [
+            [
+              "roll back minimally",
+              "minimal-scope rollback"
+            ]
+          ]
+        },
+        {
+          "path": "PHASES.md",
+          "required_any": [
+            [
+              "minimal rollback"
+            ],
+            [
+              "smallest layer scope",
+              "minimal scope"
+            ]
+          ]
+        },
+        {
+          "path": "core/flow.md",
+          "required_any": [
+            [
+              "minimum rollback scope",
+              "minimal rollback"
+            ]
+          ]
+        },
+        {
+          "path": "core/exit-and-reentry.md",
+          "required_any": [
+            [
+              "minimal rollback policy",
+              "smallest layer"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "layer5-product-contract",
+      "documents": [
+        {
+          "path": "SPEC.md",
+          "required_any": [
+            [
+              "version declaration"
+            ],
+            [
+              "boundary definition"
+            ],
+            [
+              "change log"
+            ],
+            [
+              "acceptance criteria"
+            ]
+          ]
+        },
+        {
+          "path": "CHECKS.md",
+          "required_any": [
+            [
+              "product contract includes version declaration"
+            ],
+            [
+              "product contract includes boundary definition"
+            ],
+            [
+              "product contract includes change log"
+            ],
+            [
+              "product contract includes acceptance criteria"
+            ]
+          ]
+        },
+        {
+          "path": "core/checklists.md",
+          "required_any": [
+            [
+              "product contract includes version declaration"
+            ],
+            [
+              "product contract includes boundary definition"
+            ],
+            [
+              "product contract includes change log"
+            ],
+            [
+              "product contract includes acceptance criteria"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "closure-fields",
+      "documents": [
+        {
+          "path": "SPEC.md",
+          "required_any": [
+            [
+              "scope_result"
+            ],
+            [
+              "operation_state"
+            ]
+          ]
+        },
+        {
+          "path": "PHASES.md",
+          "required_any": [
+            [
+              "scope_result"
+            ],
+            [
+              "operation_state"
+            ]
+          ]
+        },
+        {
+          "path": "references/output-contract.md",
+          "required_any": [
+            [
+              "scope_result"
+            ],
+            [
+              "operation_state"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "runtime-writeback",
+      "documents": [
+        {
+          "path": "SPEC.md",
+          "required_any": [
+            [
+              "runtime facts",
+              "runtime findings"
+            ],
+            [
+              "write-back",
+              "write back"
+            ]
+          ]
+        },
+        {
+          "path": "PHASES.md",
+          "required_any": [
+            [
+              "runtime facts",
+              "runtime findings"
+            ],
+            [
+              "stale documents",
+              "stale docs"
+            ],
+            [
+              "write back",
+              "write-back"
+            ],
+            [
+              "roll back",
+              "rollback"
+            ]
+          ]
+        },
+        {
+          "path": "CHECKS.md",
+          "required_any": [
+            [
+              "runtime facts",
+              "runtime findings"
+            ],
+            [
+              "write-back",
+              "write back"
+            ],
+            [
+              "rollback",
+              "roll back"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "decision-quality-contract",
+      "documents": [
+        {
+          "path": "SKILL.md",
+          "required_any": [
+            [
+              "references/decision-quality.md",
+              "conditional risk check"
+            ]
+          ]
+        },
+        {
+          "path": "references/decision-quality.md",
+          "required_any": [
+            ["Constraints:"],
+            ["Assumptions:"],
+            ["Falsifier:"],
+            ["Decision:"],
+            ["at least three ways it may still be wrong"],
+            ["executable probe"],
+            ["Residual risk:"],
+            ["pass | stay | rollback | blocked"],
+            ["GSD"],
+            ["original non-GSD path"]
+          ]
+        },
+        {
+          "path": "core/checklists.md",
+          "required_any": [
+            [
+              "Conditional Decision-Quality Checklist",
+              "complete approved GSD receipt"
+            ]
+          ]
+        },
+        {
+          "path": "CHECKS.md",
+          "required_any": [
+            [
+              "Conditional Decision-Quality Gate",
+              "high-severity"
+            ]
+          ]
+        },
+        {
+          "path": "references/output-contract.md",
+          "required_any": [
+            [
+              "Decision-Quality Evidence",
+              "Falsifiers / probes:",
+              "Windows results remain audit-only evidence"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

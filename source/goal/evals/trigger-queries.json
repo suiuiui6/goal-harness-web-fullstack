@@ -1,0 +1,97 @@
+[
+  {
+    "id": "bare-goal-intake",
+    "query": "/goal",
+    "should_trigger": true
+  },
+  {
+    "id": "project-bootstrap-inspection-platform",
+    "query": "我们要从 0 到 1 做一个设备巡检平台，包含后台管理、巡检任务分配、移动端记录、报表导出，还要分阶段上线。你先帮我按阶段规划再推进。",
+    "should_trigger": true
+  },
+  {
+    "id": "project-maintenance-monolith-split",
+    "query": "现在的订单系统是单体应用，我们要拆成服务，同时把库存、支付、通知三条链路按顺序改掉。别直接写代码，先把整个项目怎么推进定下来。",
+    "should_trigger": true
+  },
+  {
+    "id": "project-natural-two-week-cross-layer",
+    "query": "接下来两周要把导入、审核、发布整条链路落地，前后端和数据库都要动，还要保证每个阶段有验收证据。请你按项目方式带着做。",
+    "should_trigger": true
+  },
+  {
+    "id": "project-permission-system-rebuild",
+    "query": "这不是修一个小 bug，而是要把权限系统从角色表重做成资源级授权，并且要分层验证后再上线。",
+    "should_trigger": true
+  },
+  {
+    "id": "project-runtime-stack-migration",
+    "query": "我们准备把现有 Java 后端换成 Python 服务，同时前端接口契约和部署方式也要一起改，帮我按项目来推进。",
+    "should_trigger": true
+  },
+  {
+    "id": "project-e2e-major-feature-flow",
+    "query": "要做一个端到端的新功能：客户录入、审批、通知、归档，涉及多层改动和阶段验收，先别落代码，先走完整项目流程。",
+    "should_trigger": true
+  },
+  {
+    "id": "local-null-guard",
+    "query": "给这个函数补一个空指针判断就行，不用上升到项目规划。",
+    "should_trigger": false
+  },
+  {
+    "id": "local-sql-diagnosis",
+    "query": "帮我解释这条 SQL 为什么慢，先做诊断，不要改架构。",
+    "should_trigger": false
+  },
+  {
+    "id": "local-login-style-edit",
+    "query": "把登录页按钮颜色改成蓝色，然后把文案调顺一点。",
+    "should_trigger": false
+  },
+  {
+    "id": "local-pytest-diagnosis",
+    "query": "这个 pytest 挂了，先帮我定位根因，不要顺手重做整个模块。",
+    "should_trigger": false
+  },
+  {
+    "id": "local-interface-explanation",
+    "query": "我想看一下这个接口返回值结构，顺便告诉我字段含义。",
+    "should_trigger": false
+  },
+  {
+    "id": "local-readme-polish",
+    "query": "帮我润色一下 README，让新同事更容易看懂。",
+    "should_trigger": false
+  },
+  {
+    "id": "explicit-goal-local-redirect",
+    "query": "/goal 只修复这个函数的空指针并运行对应单测，不要做项目规划。",
+    "should_trigger": true
+  },
+  {
+    "id": "meta-skill-review",
+    "query": "帮我审核一下现有 /goal Skill 的内部结构和触发描述是否合理，只做 Skill 评审，不要进入项目交付流程。",
+    "should_trigger": false
+  },
+  {
+    "id": "meta-quoted-command",
+    "query": "README 里写了示例命令 `/goal build the service`，请检查这段文档措辞，不要真的执行这个命令。",
+    "should_trigger": false
+  },
+  {
+    "id": "meta-path-inspection",
+    "query": "读取 C:\\Users\\14156\\.codex\\skills\\goal\\SKILL.md，告诉我它什么时候加载 harness-engineering；这是文件检查，不是启动项目。",
+    "should_trigger": false
+  },
+  {
+    "id": "multi-file-mechanical-rename",
+    "query": "在多个文件中把 FooDTO 精确机械改名为 CustomerDTO；现有稳定契约不变，明确不要项目规划，直接做这次多文件机械改名。",
+    "should_trigger": false
+  },
+  {
+    "id": "meta-gsd-discussion",
+    "query": "只审阅和讨论 GSD adapter 的说明与边界，不激活 /goal，也不启动任何项目交付。",
+    "should_trigger": false
+  }
+]

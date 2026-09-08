@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "stages": [
+    "classification",
+    "handoff",
+    "before_mutation",
+    "gate",
+    "rollback",
+    "specialist",
+    "closure"
+  ],
+  "routes": [
+    {
+      "id": "classification",
+      "stage": "classification",
+      "trigger": "project classification",
+      "reads": [],
+      "must_precede": ["handoff"],
+      "excludes": ["delivery execution details"]
+    },
+    {
+      "id": "handoff",
+      "stage": "handoff",
+      "trigger": "confirmed project handoff",
+      "reads": ["references/runtime-stages.md", "core/flow.md", "adapters/codex/host-map.md"],
+      "must_precede": ["before_mutation"],
+      "excludes": []
+    },
+    {
+      "id": "web-fullstack-delivery",
+      "stage": "specialist",
+      "trigger": "web full-stack delivery applicability",
+      "reads": ["references/web-fullstack-delivery.md", "references/domain-routing.md"],
+      "must_precede": ["gate"],
+      "excludes": []
+    },
+    {
+      "id": "before-mutation-safety",
+      "stage": "before_mutation",
+      "trigger": "governed mutation",
+      "reads": ["references/host-modes.md"],
+      "must_precede": ["gate"],
+      "excludes": []
+    },
+    {
+      "id": "gate",
+      "stage": "gate",
+      "trigger": "layer gate",
+      "reads": ["core/checklists.md"],
+      "must_precede": ["closure"],
+      "excludes": []
+    },
+    {
+      "id": "rollback",
+      "stage": "rollback",
+      "trigger": "rollback decision",
+      "reads": ["core/exit-and-reentry.md"],
+      "must_precede": [],
+      "excludes": []
+    },
+    {
+      "id": "closure",
+      "stage": "closure",
+      "trigger": "verified closure",
+      "reads": ["references/output-contract.md"],
+      "must_precede": [],
+      "excludes": []
+    }
+  ]
+}
