@@ -11,6 +11,7 @@ jobs:
     env:
       GOAL_TEST_GUARD: ${{ github.workspace }}/source/goal-enforcement/scripts/goal_guard.py
       GOAL_TEST_SKILLS_ROOT: ${{ github.workspace }}/source
+      GOAL_TEST_GLOBAL_AGENTS: ${{ github.workspace }}/source/deployment/AGENTS.md
       GOAL_RUN_GUARD_INTEGRATION: '1'
     steps:
       - uses: actions/checkout@v4

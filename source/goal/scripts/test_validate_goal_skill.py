@@ -18,7 +18,8 @@ from unittest.mock import patch
 
 
 SKILL_ROOT = Path(__file__).resolve().parents[1]
-GLOBAL_AGENTS = (
+CONFIGURED_GLOBAL_AGENTS = os.environ.get("GOAL_TEST_GLOBAL_AGENTS")
+GLOBAL_AGENTS = Path(CONFIGURED_GLOBAL_AGENTS).resolve() if CONFIGURED_GLOBAL_AGENTS else (
     SKILL_ROOT.parent / "deployment" / "AGENTS.md"
     if (SKILL_ROOT.parent / "deployment" / "AGENTS.md").exists()
     else Path.home() / ".codex" / "AGENTS.md"
