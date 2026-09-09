@@ -55,6 +55,14 @@ not prove delivery correctness.
 | `fixtures/web-notes` | local page/API/SQLite fixture |
 | `goal_harness` | public CLI |
 
+## Upstream integration
+
+- [goal-skill](https://github.com/suiuiui6/goal-skill) is the canonical Goal source.
+- [harness-engineering-skill](https://github.com/suiuiui6/harness-engineering-skill) is the canonical Harness source.
+- This repository pins both upstream commits in `tools/source-integrations.json`
+  and CI rejects unresolved or changed upstream refs. It is the integration and
+  Web full-stack verification layer, not a competing canonical copy.
+
 ## Development
 
 ```powershell

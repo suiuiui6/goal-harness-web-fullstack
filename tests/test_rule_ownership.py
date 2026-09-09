@@ -58,7 +58,11 @@ def test_dependency_cycle_is_rejected(tmp_path):
     assert "dependency cycle" in result.stderr
 
 
-def test_stage_d_requires_all_canonical_and_consumer_files():
-    result = run_check(MANIFEST, "D")
+def test_stage_d_requires_all_canonical_and_consumer_files(tmp_path):
+    data = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    data["rules"][0]["consumers"].append("source/missing-consumer.md")
+    manifest = tmp_path / "ownership.json"
+    manifest.write_text(json.dumps(data), encoding="utf-8")
+    result = run_check(manifest, "D")
     assert result.returncode == 1
     assert "missing required path" in result.stderr

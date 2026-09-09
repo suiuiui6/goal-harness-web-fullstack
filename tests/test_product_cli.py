@@ -1,5 +1,8 @@
 import subprocess
 import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def run_cli(*args):
@@ -26,7 +29,15 @@ def test_capability_check_reports_audit_only_windows():
     assert "audit-only-windows" in result.stdout
 
 
-def test_delivery_audit_requires_workspace_and_reports_guard_result():
-    result = run_cli("delivery-audit", "--root", ".")
+def test_delivery_audit_requires_workspace_and_reports_guard_result(tmp_path):
+    guard = ROOT / "source" / "goal-enforcement" / "scripts" / "goal_guard.py"
+    initialized = subprocess.run([
+        sys.executable, "-B", str(guard), "initialize-state",
+        "--workspace", str(tmp_path), "--goal", "CI audit fixture",
+        "--mode", "maintenance", "--start-layer", "4",
+        "--rationale", "isolated test state",
+    ], capture_output=True, text=True)
+    assert initialized.returncode == 0, initialized.stdout + initialized.stderr
+    result = run_cli("delivery-audit", "--root", str(tmp_path), "--guard", str(guard))
     assert result.returncode == 0
     assert "goal state audit" in result.stdout.lower()

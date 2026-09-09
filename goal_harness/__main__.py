@@ -15,12 +15,13 @@ def main() -> int:
     commands = parser.add_subparsers(dest="command", required=True)
     for name in ("validate", "capability-check", "delivery-audit"):
         command = commands.add_parser(name); command.add_argument("--root", default=".")
+        if name == "delivery-audit": command.add_argument("--guard")
     args = parser.parse_args(); root = Path(args.root).resolve(); python = sys.executable
     if args.command == "validate":
         goal = run("Goal validator", [python, "-B", "source/goal/scripts/validate_goal_skill.py", "source/goal"], root)
         harness = run("Harness validator", [python, "-B", "source/harness-engineering/scripts/validate_harness_skill.py", "source/harness-engineering"], root)
         return goal or harness
-    guard = root / "source" / "goal-enforcement" / "scripts" / "goal_guard.py"
+    guard = Path(args.guard).resolve() if getattr(args, "guard", None) else root / "source" / "goal-enforcement" / "scripts" / "goal_guard.py"
     if args.command == "capability-check": return run("Guard capability", [python, "-B", str(guard), "capabilities"], root)
     return run("Delivery audit", [python, "-B", str(guard), "audit", "--workspace", str(root)], root)
 

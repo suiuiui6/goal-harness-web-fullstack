@@ -2,6 +2,7 @@ name: CI
 
 on:
   push:
+    branches: [main]
   pull_request:
 
 jobs:
@@ -18,3 +19,4 @@ jobs:
       - run: python -m pytest --rootdir . -p no:cacheprovider source/goal/scripts -q
       - run: python -m pytest --rootdir . -p no:cacheprovider source/harness-engineering/scripts -q
       - run: python -m goal_harness validate --root .
+      - run: python tools/check_source_integrations.py --root . --online
