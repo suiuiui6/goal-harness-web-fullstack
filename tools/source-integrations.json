@@ -6,7 +6,7 @@
       "name": "goal",
       "repository": "https://github.com/suiuiui6/goal-skill",
       "ref": "main",
-      "commit": "8ffb4b083d436d960caa516e03e9522cd3526b9c",
+      "commit": "6e8cbac178562b8cfa5d62f8df6b3d54f0c67354",
       "canonical_path": "goal/SKILL.md and goal/references/scripts/evals",
       "integration_path": "source/goal",
       "compatibility": "Goal Protocol v2; delivery feature web-fullstack-delivery-v1; Guard protocol major 1"
@@ -15,7 +15,7 @@
       "name": "harness-engineering",
       "repository": "https://github.com/suiuiui6/harness-engineering-skill",
       "ref": "master",
-      "commit": "c40880f6406509838e41cad54422bea3792663af",
+      "commit": "cf768ad99b7cb28e4ce141b1aa83ab7316158492",
       "canonical_path": "SKILL.md, core, references, adapters, scripts, evals",
       "integration_path": "source/harness-engineering",
       "compatibility": "seven-layer Harness contract; load-policy v1; audit-only-windows"
