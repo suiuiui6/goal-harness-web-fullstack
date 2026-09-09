@@ -1387,15 +1387,18 @@ class RollbackTests(unittest.TestCase):
 
 class DocumentationTests(unittest.TestCase):
     def test_initialization_requirement_covers_all_layers(self):
-        docs = (Path("C:/Users/14156/.codex/skills/goal/references/host-modes.md")).read_text(encoding="utf-8")
+        docs = (
+            Path(__file__).resolve().parents[2]
+            / "goal"
+            / "references"
+            / "host-modes.md"
+        ).read_text(encoding="utf-8")
         self.assertRegex(docs, r"first governed mutation.*any layer|all layers.*initialize-state")
 
 
 class MissingStateGuardTests(unittest.TestCase):
-    TEST_TMP_ROOT = Path("C:/Users/14156/.codex/visualizations/2026/09/01/01a05cd1-9885-71c0-920a-c5b7f018d80c")
-
     def test_write_state_requires_initialize_state_when_missing(self):
-        with tempfile.TemporaryDirectory(dir=self.TEST_TMP_ROOT) as directory:
+        with tempfile.TemporaryDirectory() as directory:
             workspace = Path(directory)
             candidate = workspace / "candidate.json"
             candidate.write_text(json.dumps(state(phase="classified")), encoding="utf-8")
@@ -1407,7 +1410,7 @@ class MissingStateGuardTests(unittest.TestCase):
             self.assertFalse((workspace / ".codex" / "goal-state.json").exists())
 
     def test_missing_state_hooks_do_not_create_guard_lock(self):
-        with tempfile.TemporaryDirectory(dir=self.TEST_TMP_ROOT) as directory:
+        with tempfile.TemporaryDirectory() as directory:
             workspace = Path(directory)
             payload = {"cwd": str(workspace), "tool_name": "apply_patch", "tool_input": {"patch": "x"}}
             result = subprocess.run(
@@ -1418,7 +1421,7 @@ class MissingStateGuardTests(unittest.TestCase):
             self.assertFalse((workspace / ".codex").exists())
 
     def test_missing_state_hook_blocks_direct_state_edit(self):
-        with tempfile.TemporaryDirectory(dir=self.TEST_TMP_ROOT) as directory:
+        with tempfile.TemporaryDirectory() as directory:
             workspace = Path(directory)
             payload = {"cwd": str(workspace), "tool_name": "apply_patch", "tool_input": {"patch": "*** Update File: .codex/goal-state.json"}}
             result = subprocess.run(
@@ -1429,7 +1432,7 @@ class MissingStateGuardTests(unittest.TestCase):
             self.assertIn("goal-state", json.loads(result.stdout).get("reason", ""))
 
     def test_rollback_can_recover_from_workspace_drift(self):
-        with tempfile.TemporaryDirectory(dir=self.TEST_TMP_ROOT) as directory:
+        with tempfile.TemporaryDirectory() as directory:
             workspace = Path(directory)
             (workspace / "source.txt").write_text("one", encoding="utf-8")
             fingerprint = goal_guard.workspace_fingerprint_record(workspace)
@@ -1701,10 +1704,8 @@ class AuditTests(unittest.TestCase):
 
 
 class FingerprintAndClosureTests(unittest.TestCase):
-    TEST_TMP_ROOT = Path("C:/Users/14156/.codex/visualizations/2026/09/01/01a05cd1-9885-71c0-920a-c5b7f018d80c")
-
     def _temporary_directory(self):
-        return tempfile.TemporaryDirectory(dir=self.TEST_TMP_ROOT)
+        return tempfile.TemporaryDirectory()
 
     def _verified_state(self, workspace, *, phase="verified", closure=None):
         fingerprint = goal_guard.workspace_fingerprint_record(workspace)

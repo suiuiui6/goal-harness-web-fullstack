@@ -1,5 +1,6 @@
 from copy import deepcopy
 import math
+from pathlib import Path
 
 import pytest
 
@@ -148,6 +149,10 @@ def test_delivery_import_resolves_to_candidate_source():
     import delivery_contract
     import delivery_fixtures
 
-    assert "goal-harness-web-fullstack" in delivery_contract.__file__
-    assert delivery_contract.__file__.endswith("source\\goal-enforcement\\scripts\\delivery_contract.py")
-    assert delivery_fixtures.__file__.endswith("source\\goal-enforcement\\tests\\delivery_fixtures.py")
+    candidate_root = Path(__file__).resolve().parents[1]
+    assert Path(delivery_contract.__file__).resolve() == (
+        candidate_root / "scripts" / "delivery_contract.py"
+    ).resolve()
+    assert Path(delivery_fixtures.__file__).resolve() == (
+        candidate_root / "tests" / "delivery_fixtures.py"
+    ).resolve()
