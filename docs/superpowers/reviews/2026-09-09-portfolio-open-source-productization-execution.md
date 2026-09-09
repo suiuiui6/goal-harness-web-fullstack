@@ -56,3 +56,7 @@ and Fullstack only.
   rollback compatibility. Fullstack's Harness pin was refreshed to
   `02e19200c12395170b784e40b28a320e4772a1cb` and the online integration check
   passed.
+- GraphRAG's lockfile was refreshed with `npm audit fix --package-lock-only`.
+  The remaining two moderate React Router advisories require a breaking
+  downgrade to the 5.x API; the app stays on the compatible 6.x line under
+  Node 18, with the advisories recorded as a release-candidate follow-up.
