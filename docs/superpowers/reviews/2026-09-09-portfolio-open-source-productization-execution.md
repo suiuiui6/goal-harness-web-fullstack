@@ -42,10 +42,17 @@ and Fullstack only.
 
 ## Residual risks
 
-- Knowledge Manager code tests need a separate maintenance fix; this pass did not
-  weaken assertions or add a misleading code-quality badge.
-- GraphRAG needs a dependency-installed frontend build and backend integration
-  run before stronger runtime claims are made.
-- Default branch names remain as found (`feat/verbose-logging` for Knowledge
-  Manager and `master` for Harness/GraphRAG); renaming them is intentionally out
-  of scope for this presentation pass.
+- Knowledge Manager's apparent 16 code failures were traced to an installed
+  `D:\\tyh\\knowledge-manager` checkout shadowing this repository. A test-level
+  `src` bootstrap and import-location regression test now enforce clean-shell
+  isolation; the repository suite is `106 passed, 1 warning`.
+- GraphRAG frontend dependencies were installed from the committed lockfile and
+  `npm run build` passed. A backend regression test also prevents startup logs
+  from printing the runtime file-access token; live MinerU, DeepSeek, OSS, Neo4j,
+  browser, and production checks remain `not-run`.
+- GraphRAG and Harness now have same-history `main` branches, and Knowledge
+  Manager's `main` was fast-forwarded to the verified productization tree.
+  GitHub default branches were updated to `main`; legacy branches remain for
+  rollback compatibility. Fullstack's Harness pin was refreshed to
+  `02e19200c12395170b784e40b28a320e4772a1cb` and the online integration check
+  passed.
