@@ -6,7 +6,7 @@
       "name": "goal",
       "repository": "https://github.com/suiuiui6/goal-skill",
       "ref": "main",
-      "commit": "ac3f523587ec4306ce438c3b6ff68feeb54d0374",
+      "commit": "8ffb4b083d436d960caa516e03e9522cd3526b9c",
       "canonical_path": "goal/SKILL.md and goal/references/scripts/evals",
       "integration_path": "source/goal",
       "compatibility": "Goal Protocol v2; delivery feature web-fullstack-delivery-v1; Guard protocol major 1"
