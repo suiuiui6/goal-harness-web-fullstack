@@ -18,6 +18,19 @@ INTEGRATION_ENABLED = os.environ.get("GOAL_RUN_GUARD_INTEGRATION") == "1"
 _integration_deadline = None
 
 
+def selected_test_guard() -> Path:
+    configured = os.environ.get("GOAL_TEST_GUARD")
+    return (
+        Path(configured)
+        if configured
+        else Path.home()
+        / "plugins"
+        / "goal-enforcement"
+        / "scripts"
+        / "goal_guard.py"
+    ).resolve()
+
+
 def run_stage(
     name: str,
     argv: Sequence[str],
@@ -55,7 +68,7 @@ class GoalGuardIntegrationTests(unittest.TestCase):
         global _integration_deadline
         _integration_deadline = time.monotonic() + INTEGRATION_DEADLINE_SECONDS
 
-        guard = Path.home() / "plugins" / "goal-enforcement" / "scripts" / "goal_guard.py"
+        guard = selected_test_guard()
         if not guard.exists():
             self.skipTest(f"goal guard not installed at {guard}")
 

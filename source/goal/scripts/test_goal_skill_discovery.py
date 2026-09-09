@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import os
 import re
 import unittest
 from pathlib import Path
 
 
-SKILLS_ROOT = Path.home() / ".codex" / "skills"
+SKILLS_ROOT = Path(
+    os.environ.get("GOAL_TEST_SKILLS_ROOT", Path.home() / ".codex" / "skills")
+).resolve()
 EXPECTED_GOAL_SKILL = (SKILLS_ROOT / "goal" / "SKILL.md").resolve()
 GOAL_FRONTMATTER = re.compile(r"(?mi)^name:\s*goal\s*$")
 
