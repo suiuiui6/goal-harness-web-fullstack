@@ -72,8 +72,9 @@ python -B -m pytest --rootdir . -p no:cacheprovider source/goal/scripts -q
 python -B -m pytest --rootdir . -p no:cacheprovider source/harness-engineering/scripts -q
 ```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md), and
-[CHANGELOG.md](CHANGELOG.md). This project is MIT licensed.
+See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md),
+[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md), and [CHANGELOG.md](CHANGELOG.md).
+This project is MIT licensed.
 
 ## Roadmap
 
