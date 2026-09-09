@@ -17,10 +17,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: python -m pip install pytest
-      - run: python -m pytest --rootdir . -p no:cacheprovider tests -q
-      - run: python -m pytest --rootdir . -p no:cacheprovider source/goal-enforcement/tests -q
-      - run: python -m pytest --rootdir . -p no:cacheprovider source/goal/scripts -q
-      - run: python -m pytest --rootdir . -p no:cacheprovider source/harness-engineering/scripts -q
-      - run: python -m goal_harness validate --root .
-      - run: python tools/check_source_integrations.py --root . --online
+      - run: python -B -m pip install pytest
+      - run: python -B -m pytest --rootdir . -p no:cacheprovider tests -q
+      - run: python -B -m pytest --rootdir . -p no:cacheprovider source/goal-enforcement/tests -q
+      - run: python -B -m pytest --rootdir . -p no:cacheprovider source/goal/scripts -q
+      - run: python -B -m pytest --rootdir . -p no:cacheprovider source/harness-engineering/scripts -q
+      - run: python -B -m goal_harness validate --root .
+      - run: python -B tools/check_source_integrations.py --root . --online

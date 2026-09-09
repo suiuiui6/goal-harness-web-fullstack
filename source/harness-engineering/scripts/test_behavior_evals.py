@@ -29,6 +29,9 @@ _remove_module_cache_file()
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 BUNDLE_ROOT = SCRIPT_DIR.parent
+GOAL_SKILLS_ROOT = Path(
+    os.environ.get("GOAL_TEST_SKILLS_ROOT", Path.home() / ".codex" / "skills")
+).resolve()
 
 
 def _select_temp_parent() -> Path:
@@ -251,7 +254,7 @@ Result: stay"""
 
     def test_goal_eval_prompts_load_separately_without_replacement_markers(self):
         goal_catalog = json.loads(
-            (Path.home() / ".codex" / "skills" / "goal" / "evals" / "behavior-evals.json").read_text(encoding="utf-8")
+            (GOAL_SKILLS_ROOT / "goal" / "evals" / "behavior-evals.json").read_text(encoding="utf-8")
         )
         self.assertIsInstance(goal_catalog.get("evals"), list)
         self.assertTrue(goal_catalog["evals"])
